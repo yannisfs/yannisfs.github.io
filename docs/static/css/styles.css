@@ -1,16 +1,16 @@
 :root {
-    --primary: #000000;
-    --secondary: #757575;
-  }
-  
+--primary: #000000;
+--secondary: #757575;
+}
 
-  * {
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -22,24 +22,23 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-  }
-  
-  /* NAVBAR */
-  .navbar {
+}
+
+
+.navbar {
     width: 100%;
     padding: 1rem 2rem;
     display: flex;
     flex-direction: row;
     align-items: center;
-  }
-  
-  .logo {
+}
+
+.logo {
     width: 150px;
     height: auto;
-  }
-  
-  
-  .main-hero {
+}
+
+.main-hero {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -47,44 +46,43 @@
     align-items: center;
     padding: 2rem 1rem;
     text-align: center;
-  }
-  
-  .hero-title {
+}
+
+.hero-title {
     font-weight: 300;
     font-size: 2rem;
     color: var(--primary);
     margin-bottom: 1rem;
-  }
-  
-  .hero-sub {
+}
+
+.hero-sub {
     font-weight: 300;
     font-size: 1.2rem;
     color: var(--secondary);
-  }
-  
-  /* FOOTER BAR */
-  .footbar {
+}
+
+.footbar {
     width: 100%;
     padding: 1rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .footbar p {
+}
+
+.footbar p {
     font-size: 1rem;
     color: var(--primary);
-  }
+}
   
 
-  @media (max-width: 600px) {
-    .hero-title {
-      font-size: 1.5rem;
-    }
-    .hero-sub {
-      font-size: 1rem;
-    }
-    .logo {
-      width: 120px;
-    }
-  }
+@media (max-width: 600px) {
+.hero-title {
+    font-size: 1.5rem;
+}
+.hero-sub {
+    font-size: 1rem;
+}
+.logo {
+    width: 120px;
+}
+}
