@@ -1,60 +1,92 @@
-:root{
+:root {
     --primary: #000000;
     --secondary: #757575;
-}
-body{
-    height: 100%;
-    width: 100%;
+  }
+  
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-image: url('../images/bg_gradient_v2.png');
+    font-family: sans-serif;
+
+    background-image: url("../images/bg_gradient_v2.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
-
-.navbar{
+  }
+  
+  /* NAVBAR */
+  .navbar {
     width: 100%;
-    height: 10%;
+    padding: 1rem 2rem;
     display: flex;
     flex-direction: row;
-    justify-content: start;
     align-items: center;
-}
-
-.logo{
-    width: 7%;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .logo {
+    width: 150px;
     height: auto;
-    padding-left: 2rem;
-}
-
-.main-hero{
+  }
+  
+  
+  .main-hero {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 40rem;
-    margin: auto;
-}
-
-.hero-title{
+    padding: 2rem 1rem;
     text-align: center;
-    font-weight: lighter;
-    color: var(--primary)
-}
-
-.hero-sub{
-    font-weight: lighter;
+  }
+  
+  .hero-title {
+    font-weight: 300;
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+  
+  .hero-sub {
+    font-weight: 300;
+    font-size: 1.2rem;
     color: var(--secondary);
-}
-
-.footbar{
-    height: 10%;
+  }
+  
+  /* FOOTER BAR */
+  .footbar {
     width: 100%;
+    padding: 1rem 2rem;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-}
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .footbar p {
+    font-size: 1rem;
+    color: var(--primary);
+  }
+  
+
+  @media (max-width: 600px) {
+    .hero-title {
+      font-size: 1.5rem;
+    }
+    .hero-sub {
+      font-size: 1rem;
+    }
+    .logo {
+      width: 120px;
+    }
+  }
