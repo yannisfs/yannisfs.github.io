@@ -2,7 +2,6 @@
     --primary: #000000;
     --secondary: #757575;
 }
-
 body{
     height: 100%;
     width: 100%;
@@ -10,8 +9,10 @@ body{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background: no-repeat center url('../images/bg_gradient_v2.png');
-    object-fit: cover;
+    background-image: url('../images/bg_gradient_v2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .navbar{
