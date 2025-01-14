@@ -1,0 +1,6 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: "images/bg_gradient_v2.png";
+}
