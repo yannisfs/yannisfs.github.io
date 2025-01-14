@@ -18,10 +18,11 @@ body {
     align-items: center;
     font-family: sans-serif;
 
-    background-image: url("../images/bg_gradient_v2.png"), url("../images/BG_spikes_fhd.png");
+    background-image: url("../images/BG_spikes_fhd.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-color: #D6D8DA;
 }
 
 
