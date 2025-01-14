@@ -10,7 +10,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-image: url('../images/bg_gradient_v2.png');
+    background-image: no-repeat center url('../images/bg_gradient_v2.png');
 }
 
 .navbar{
