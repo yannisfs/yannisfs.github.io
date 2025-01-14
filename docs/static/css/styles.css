@@ -10,6 +10,7 @@ body{
 
 .navbar{
     width: 100%;
+    height: 10%;
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -27,10 +28,12 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 80%;
     padding: auto;
 }
 
 .footbar{
+    height: 10%;
     width: 100%;
     display: flex;
     flex-direction: row;
