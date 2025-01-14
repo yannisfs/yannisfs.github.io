@@ -38,8 +38,6 @@ body{
 }
 
 .hero-title{
-    padding-top: auto;
-    padding-bottom: auto;
     text-align: center;
     font-weight: lighter;
     color: var(--primary)
