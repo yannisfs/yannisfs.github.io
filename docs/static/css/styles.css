@@ -11,6 +11,7 @@ body{
     justify-content: space-between;
     align-items: center;
     background-image: no-repeat center url('../images/bg_gradient_v2.png');
+    object-fit: cover;
 }
 
 .navbar{
