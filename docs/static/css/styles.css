@@ -25,6 +25,7 @@ body {
     background-color: #D6D8DA;
 }
 
+/* styles for the background svg-wrapper */
 .background-svg-wrap {
     position: fixed;
     top: 0; 
