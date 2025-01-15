@@ -32,6 +32,10 @@
     <link rel="shortcut icon" href="static/images/favicon.png" type="image/png" />
     <!-- Link to CSS -->
     <link rel="stylesheet" href="static/css/styles.css" />
+
+    <!-- GSAP + ScrollTrigger (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
     </head>
     <body>
         <svg height="1080.0px" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" viewBox="0 0 1920 1080" width="1920.0px" xml:space="preserve">
@@ -52,8 +56,18 @@
         </svg>
 
         <div class="reveal">
-            
+
         </div>
     </body>
-    <script src="static/js/script.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const tl = gsap.timeline({defaults: { ease: 'power4.out, duration: .7'}})
+
+        gsap.set('g', {
+            autoAlpha: 1
+        })
+        
+    </script>
+    <script src="static/js/main.js"></script>
 </html>
