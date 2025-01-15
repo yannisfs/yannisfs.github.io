@@ -1,79 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Netarch FHD & Mobile Demo</title>
+  <meta charset="UTF-8">
+  <title>Netarch Fixed Layout</title>
 
-  <!-- Responsive meta for mobile -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <!-- Responsive for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
   <!-- GSAP + ScrollTrigger (CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
 
   <style>
-    /* --- Basic Reset & Page Layout --- */
+    /* ---------------------------------------------------
+       RESET & BASIC PAGE LAYOUT
+    --------------------------------------------------- */
     html, body {
       margin: 0;
       padding: 0;
-      /* Enough height so there's some scrolling room */
-      min-height: 200vh;
-      /* White or other color so crystals are clearly visible behind content */
-      background-color: #ffffff;
+      height: 100%;           /* For 100vh calculations */
+      overflow-x: hidden;     /* Avoid horizontal scroll */
       font-family: sans-serif;
+      background: transparent !important; /* Keep background transparent so SVG shows through */
       position: relative;
-      overflow-x: hidden; 
     }
 
-    /* --- Full-Viewport Background SVG --- */
+    /* ---------------------------------------------------
+       FULL-VIEWPORT BACKGROUND SVG
+    --------------------------------------------------- */
     .background-svg-wrap {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100vw;   /* Fill full width of viewport */
-      height: 100vh;  /* Fill full height of viewport */
-      z-index: -1;    /* Behind other content */
-      pointer-events: none;
-      overflow: hidden; 
+      width: 100vw;          /* Fill full viewport width */
+      height: 100vh;         /* Fill full viewport height */
+      z-index: -1;           /* Behind other elements */
+      pointer-events: none;  /* Don’t intercept clicks */
+      overflow: hidden;      /* Hide any oversize animation */
     }
 
     #background-svg {
-      display: block;
       width: 100%;
       height: 100%;
-      /* This helps fill the container while cropping extra edges to maintain aspect ratio */
-      /* We'll do a large viewBox (1920x1080) for HD coverage */
+      display: block;
+      /* 
+         Large coordinate space (e.g. 1920 x 1080). 
+         'slice' prevents empty margins but can crop edges 
+      */
     }
 
-    /* --- Navbar --- */
+    /* ---------------------------------------------------
+       NAVBAR (Fixed at top)
+    --------------------------------------------------- */
     .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
-      background: rgba(255, 255, 255, 0.7);
+      height: 60px;                /* Navbar height */
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-translucent */
       display: flex;
       align-items: center;
-      padding: 1rem 2rem;
+      padding: 0 1rem;
       box-sizing: border-box;
-      position: relative; /* ensures stacking above background */
-      z-index: 1; 
+      z-index: 1;
     }
 
     .logo {
-      width: 150px;
-      height: auto;
+      height: 40px;  /* Adjust as needed */
+      width: auto;
     }
 
-    /* --- Hero Section --- */
+    /* ---------------------------------------------------
+       FOOTER BAR (Fixed at bottom)
+    --------------------------------------------------- */
+    .footbar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;                /* Footer height */
+      background-color: rgba(255, 255, 255, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    }
+
+    /* ---------------------------------------------------
+       MAIN HERO SECTION
+       Occupies space between the fixed navbar & footbar
+    --------------------------------------------------- */
     .main-hero {
+      /* 
+         Full viewport minus nav & foot heights 
+         so it fills the “middle” area exactly
+      */
+      min-height: calc(100vh - 60px - 50px);
+      /* 
+         Add top & bottom padding so text isn’t
+         glued to the edges
+      */
+      padding-top: 60px;  /* matches navbar height */
+      padding-bottom: 50px; /* matches footbar height */
+
+      /* Center content */
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      margin: 4rem auto;
-      max-width: 800px;
+
+      /* Stacking above the background */
       position: relative;
       z-index: 1;
-      padding: 0 1rem;
     }
 
     .hero-title {
@@ -88,17 +128,9 @@
       color: #666;
     }
 
-    /* --- Footer Bar --- */
-    .footbar {
-      width: 100%;
-      text-align: center;
-      background: rgba(255, 255, 255, 0.7);
-      padding: 1rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* --- Media Query for smaller screens --- */
+    /* ---------------------------------------------------
+       MEDIA QUERY (Smaller Screens)
+    --------------------------------------------------- */
     @media (max-width: 600px) {
       .hero-title {
         font-size: 1.5rem;
@@ -107,22 +139,21 @@
         font-size: 1rem;
       }
       .logo {
-        width: 120px;
+        height: 30px;
       }
     }
   </style>
 </head>
-
 <body>
 
-  <!-- Full-Viewport SVG Container -->
+  <!-- FULL-VIEWPORT SVG BACKGROUND -->
   <div class="background-svg-wrap">
     <svg 
-      id="background-svg" 
-      viewBox="0 0 1920 1080" 
+      id="background-svg"
+      viewBox="0 0 1920 1080"
       preserveAspectRatio="xMidYMid slice"
     >
-      <!-- EXAMPLE CRYSTAL-LIKE POLYGONS spanning y=1080 (bottom) up to various top coordinates -->
+      <!-- Example Polygons (Crystals) anchored near y=1080 for bottom. Tweak as desired -->
       <polygon 
         id="crystal1"
         points="200,1080 180,600 220,500 260,300 300,600 320,1080"
@@ -151,29 +182,29 @@
     </svg>
   </div>
 
-  <!-- Navbar -->
+  <!-- NAVBAR (fixed at top) -->
   <div class="navbar">
-    <img class="logo" src="static/images/Netarch_logo_new.svg" alt="Netarch Logo" />
+    <img class="logo" src="static/images/Netarch_logo_new.svg" alt="Netarch Logo">
   </div>
 
-  <!-- Main Hero -->
+  <!-- MAIN HERO (fills remaining space) -->
   <div class="main-hero">
     <h1 class="hero-title">Network Architecture is our passion.</h1>
     <h5 class="hero-sub">2025 - your year to go web public</h5>
   </div>
 
-  <!-- Footer Bar -->
+  <!-- FOOTER BAR (fixed at bottom) -->
   <div class="footbar">
     <p>presented by netarch</p>
   </div>
 
-  <!-- GSAP + ScrollTrigger Animation -->
+  <!-- GSAP + ScrollTrigger -->
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
     const crystals = ["#crystal1", "#crystal2", "#crystal3", "#crystal4", "#crystal5"];
 
-    // Create a timeline that spans the entire scroll
+    // Timeline that controls the entire scroll distance
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: document.body,
@@ -183,10 +214,10 @@
       }
     });
 
-    crystals.forEach((selector) => {
-      // Example random offsets for large coordinate space
+    crystals.forEach(selector => {
+      // Example random offsets for a 1920x1080 space
       const randX = gsap.utils.random(-100, 100);
-      const randY = gsap.utils.random(-500, -800);
+      const randY = gsap.utils.random(-300, -800);
       const randRot = gsap.utils.random(-30, 30);
 
       // Animate each polygon upward, possibly rotating
@@ -197,10 +228,10 @@
         rotation: randRot,
         transformOrigin: "50% 100%",
         ease: "power2.inOut"
-      }, 0); // all start at timeline time 0
+      }, 0);
     });
 
-    // Optional fade out near the bottom
+    // Optionally fade them out near the bottom
     tl.to(crystals, {
       duration: 1.5,
       opacity: 0
