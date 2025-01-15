@@ -1,106 +1,46 @@
-:root {
---primary: #000000;
---secondary: #757575;
-}
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    font-family: sans-serif;
-
-    /* background-image: url("../images/BG_spikes_fhd.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; */
-    background-color: #D6D8DA;
-}
-
-/* styles for the background svg-wrapper */
-.background-svg-wrap {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    overflow: hidden;
-    pointer-events: none;
-}
-.background-svg-wrap svg {
-    width: 100%;
-    height: 100%;
-    display: block; /* remove default inline spacing */
-}
-
-.navbar {
-    width: 100%;
-    padding: 1rem 2rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.logo {
-    width: 150px;
-    height: auto;
-}
-
-.main-hero {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 1rem;
-    text-align: center;
-}
-
-.hero-title {
-    font-weight: 300;
-    font-size: 2rem;
-    color: white;
-    mix-blend-mode: difference;
-    margin-bottom: 1rem;
-}
-
-.hero-sub {
-    font-weight: 300;
-    font-size: 1.2rem;
-    color: var(--secondary);
-}
-
-.footbar {
-    width: 100%;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.footbar p {
-    font-size: 1rem;
-    color: var(--primary);
-}
+    /* Basic Page Setup */
+    html, body {
+        margin: 0;
+        padding: 0;
+        /* Ensure there's enough height for scrolling */
+        height: 200vh;
+        font-family: sans-serif;
+        position: relative;
+        overflow-x: hidden;
+      }
   
-
-@media (max-width: 600px) {
-.hero-title {
-    font-size: 1.5rem;
-}
-.hero-sub {
-    font-size: 1rem;
-}
-.logo {
-    width: 120px;
-}
-}
+      h1 {
+        text-align: center;
+        margin-top: 2rem;
+      }
+  
+      /* A bit of filler content to scroll through */
+      .content {
+        width: 80%;
+        max-width: 800px;
+        margin: 3rem auto;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      }
+  
+      /* The container that holds the crystal SVG at the bottom */
+      .crystal-container {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 300px;       /* matches the SVG's coordinate height (viewBox 0..300) */
+        z-index: -1;         /* behind the content */
+        pointer-events: none;/* clicks pass through */
+        overflow: visible;   /* in case we animate them upwards */
+      }
+  
+      /* Make the inline SVG fill the container’s width and height */
+      #crystal-svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        /* Ensures bottom alignment within the 300px container */
+        preserveAspectRatio: xMidYMax meet;
+      }

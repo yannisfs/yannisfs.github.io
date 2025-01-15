@@ -8,55 +8,7 @@
   <!-- GSAP + ScrollTrigger (via CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
-
-  <style>
-    /* Basic Page Setup */
-    html, body {
-      margin: 0;
-      padding: 0;
-      /* Ensure there's enough height for scrolling */
-      height: 200vh;
-      font-family: sans-serif;
-      position: relative;
-      overflow-x: hidden;
-    }
-
-    h1 {
-      text-align: center;
-      margin-top: 2rem;
-    }
-
-    /* A bit of filler content to scroll through */
-    .content {
-      width: 80%;
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-
-    /* The container that holds the crystal SVG at the bottom */
-    .crystal-container {
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 300px;       /* matches the SVG's coordinate height (viewBox 0..300) */
-      z-index: -1;         /* behind the content */
-      pointer-events: none;/* clicks pass through */
-      overflow: visible;   /* in case we animate them upwards */
-    }
-
-    /* Make the inline SVG fill the container’s width and height */
-    #crystal-svg {
-      display: block;
-      width: 100%;
-      height: 100%;
-      /* Ensures bottom alignment within the 300px container */
-      preserveAspectRatio: xMidYMax meet;
-    }
-  </style>
+  <link rel="stylesheet" href="static/css/styles.css">
 </head>
 
 <body>
@@ -105,44 +57,6 @@
     </svg>
   </div>
 
-  <script>
-    // Register GSAP plugins
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Array of crystal IDs
-    const crystals = ["#crystal1", "#crystal2", "#crystal3", "#crystal4", "#crystal5"];
-
-    // Create a timeline linked to scroll
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: document.body, // animate throughout the full page
-        start: "top top",
-        end: "bottom bottom",
-        scrub: true,       // links animation progress to scroll
-      }
-    });
-
-    // Animate each crystal "breaking" upward with random offsets
-    crystals.forEach((selector) => {
-      const randX = gsap.utils.random(-40, 40);
-      const randY = gsap.utils.random(-150, -300);
-      const randRot = gsap.utils.random(-30, 30);
-
-      tl.to(selector, {
-        duration: 3,
-        x: randX,
-        y: randY,
-        rotation: randRot,
-        transformOrigin: "50% 100%", // pivot from bottom center
-        ease: "power2.inOut"
-      }, 0); // Start all at timeline position 0
-    });
-
-    // Optionally fade them out near the end
-    tl.to(crystals, {
-      duration: 1.5,
-      opacity: 0
-    }, ">-0.5"); // start fade near the end
-  </script>
+  <script src="static/js/script.js"></script>
 </body>
 </html>
