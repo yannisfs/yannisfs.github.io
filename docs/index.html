@@ -2,64 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Netarch 2025</title>
+  <title>Netarch FHD & Mobile Demo</title>
 
-  <!-- Important for responsive design on mobile -->
+  <!-- Responsive meta for mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-  <!-- Google Search Verification Tag -->
-  <meta name="google-site-verification" content="snQ83qugK9pGb-jvhta9NohbepOSY3ZaAvw58kk79xo" />
-
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Netarch Agency" />
-  <meta property="og:description" content="Network Architecture & Website Solutions" />
-  <meta property="og:url" content="https://netarch.co" />
-  <meta property="og:image" content="https://netarch.co/static/images/Quicklink_Thumbnail_Netarch.png" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image" content="https://netarch.co/static/images/Quicklink_Thumbnail_Square_Netarch.png" />
-  <meta property="og:image:height" content="512" />
-  <meta property="og:image:width" content="512" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter Card tags-->
-  <meta name="twitter:card" content="Company Logo" />
-  <meta name="twitter:title" content="Netarch Agency" />
-  <meta name="twitter:description" content="Network Architecture & Website Solutions" />
-  <meta name="twitter:image" content="https://netarch.co/static/images/Quicklink_Thumbnail_Netarch.png" />
-
-  <!-- link to favicon -->
-  <link rel="shortcut icon" href="static/images/favicon.png" type="image/png" />
-
-  <!-- GSAP + ScrollTrigger (via CDN) -->
+  <!-- GSAP + ScrollTrigger (CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
 
-  <!-- Example Inline Styles (You can move these to 'static/css/styles.css' if you like) -->
   <style>
-    /* Reset & Basic Page Layout */
+    /* --- Basic Reset & Page Layout --- */
     html, body {
       margin: 0;
       padding: 0;
-      min-height: 200vh; /* Enough room to scroll */
+      /* Enough height so there's some scrolling room */
+      min-height: 200vh;
+      /* White or other color so crystals are clearly visible behind content */
+      background-color: #ffffff;
       font-family: sans-serif;
-      /* If you want a specific background color, set it here, but ensure crystals remain visible */
-      background-color: #ffffff; /* or #f5f5f5, etc. */
       position: relative;
-      overflow-x: hidden;
+      overflow-x: hidden; 
     }
 
-    /* Navbar */
+    /* --- Full-Viewport Background SVG --- */
+    .background-svg-wrap {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;   /* Fill full width of viewport */
+      height: 100vh;  /* Fill full height of viewport */
+      z-index: -1;    /* Behind other content */
+      pointer-events: none;
+      overflow: hidden; 
+    }
+
+    #background-svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      /* This helps fill the container while cropping extra edges to maintain aspect ratio */
+      /* We'll do a large viewBox (1920x1080) for HD coverage */
+    }
+
+    /* --- Navbar --- */
     .navbar {
       width: 100%;
+      background: rgba(255, 255, 255, 0.7);
       display: flex;
-      flex-direction: row;
       align-items: center;
       padding: 1rem 2rem;
       box-sizing: border-box;
-      background-color: rgba(255, 255, 255, 0.7);
-      position: relative;
-      z-index: 1; /* Above the crystals */
+      position: relative; /* ensures stacking above background */
+      z-index: 1; 
     }
 
     .logo {
@@ -67,7 +62,7 @@
       height: auto;
     }
 
-    /* Hero Section */
+    /* --- Hero Section --- */
     .main-hero {
       display: flex;
       flex-direction: column;
@@ -76,9 +71,9 @@
       text-align: center;
       margin: 4rem auto;
       max-width: 800px;
-      padding: 0 1rem;
       position: relative;
-      z-index: 1; /* above background */
+      z-index: 1;
+      padding: 0 1rem;
     }
 
     .hero-title {
@@ -93,40 +88,17 @@
       color: #666;
     }
 
-    /* Footer Bar */
+    /* --- Footer Bar --- */
     .footbar {
       width: 100%;
       text-align: center;
+      background: rgba(255, 255, 255, 0.7);
       padding: 1rem;
       position: relative;
-      z-index: 1; /* above background */
-      background-color: rgba(255, 255, 255, 0.7);
+      z-index: 1;
     }
 
-    /* Background SVG Container (Crystals) */
-    .background-svg-wrap {
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 300px; /* Matches the viewBox height if you want them anchored at bottom */
-      z-index: -1;   /* behind other elements */
-      pointer-events: none; /* so it doesn't block clicks */
-      overflow: visible;
-    }
-
-    /* The inline SVG that holds crystal polygons */
-    #background-svg {
-      width: 100%;
-      height: 100%;
-      display: block;
-      /* We anchor them so the bottom of the SVG is at the bottom of the container */
-    }
-    /* Adjust as needed: 
-       preserveAspectRatio="xMidYMid slice" ensures center focus, 
-       or use 'xMidYMax meet' if you prefer. */
-
-    /* Media Query for smaller screens */
+    /* --- Media Query for smaller screens --- */
     @media (max-width: 600px) {
       .hero-title {
         font-size: 1.5rem;
@@ -143,50 +115,48 @@
 
 <body>
 
-  <!-- Crystal SVG container (background) -->
+  <!-- Full-Viewport SVG Container -->
   <div class="background-svg-wrap">
     <svg 
       id="background-svg" 
-      viewBox="0 0 800 300"
+      viewBox="0 0 1920 1080" 
       preserveAspectRatio="xMidYMid slice"
     >
-      <!-- Example Polygons (Crystals) -->
+      <!-- EXAMPLE CRYSTAL-LIKE POLYGONS spanning y=1080 (bottom) up to various top coordinates -->
       <polygon 
         id="crystal1"
-        points="100,300 120,150 140,200 160,80 180,200 200,150 220,300"
+        points="200,1080 180,600 220,500 260,300 300,600 320,1080"
         fill="#6CCFF6"
       />
       <polygon 
         id="crystal2"
-        points="250,300 260,120 280,90 300,60 320,90 340,120 350,300"
+        points="500,1080 470,550 490,400 540,250 590,500 610,1080"
         fill="#82E0AA"
       />
       <polygon 
         id="crystal3"
-        points="390,300 410,220 430,230 450,140 470,230 490,220 510,300"
+        points="750,1080 710,700 730,600 770,450 800,600 820,700 840,1080"
         fill="#F7DC6F"
       />
       <polygon 
         id="crystal4"
-        points="540,300 550,140 570,70 590,100 610,70 630,140 640,300"
+        points="1000,1080 980,600 1020,450 1080,350 1140,600 1160,1080"
         fill="#F1948A"
       />
       <polygon 
         id="crystal5"
-        points="670,300 680,130 700,100 720,40 740,100 760,130 770,300"
+        points="1350,1080 1320,650 1360,550 1400,300 1440,550 1470,650 1500,1080"
         fill="#D7BDE2"
       />
     </svg>
   </div>
 
-  <!-- Navigation Bar -->
+  <!-- Navbar -->
   <div class="navbar">
-    <div class="navbar-item">
-      <img class="logo" src="static/images/Netarch_logo_new.svg" alt="Netarch">
-    </div>
+    <img class="logo" src="static/images/Netarch_logo_new.svg" alt="Netarch Logo" />
   </div>
 
-  <!-- Main Hero Section -->
+  <!-- Main Hero -->
   <div class="main-hero">
     <h1 class="hero-title">Network Architecture is our passion.</h1>
     <h5 class="hero-sub">2025 - your year to go web public</h5>
@@ -197,44 +167,45 @@
     <p>presented by netarch</p>
   </div>
 
-  <!-- GSAP + ScrollTrigger Animation Script -->
+  <!-- GSAP + ScrollTrigger Animation -->
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
     const crystals = ["#crystal1", "#crystal2", "#crystal3", "#crystal4", "#crystal5"];
-    
+
+    // Create a timeline that spans the entire scroll
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: document.body, // Animate throughout full page scroll
+        trigger: document.body,
         start: "top top",
         end: "bottom bottom",
-        scrub: true,
+        scrub: true
       }
     });
 
-    crystals.forEach(selector => {
-      const randX = gsap.utils.random(-40, 40);
-      const randY = gsap.utils.random(-150, -300);
+    crystals.forEach((selector) => {
+      // Example random offsets for large coordinate space
+      const randX = gsap.utils.random(-100, 100);
+      const randY = gsap.utils.random(-500, -800);
       const randRot = gsap.utils.random(-30, 30);
-      
+
+      // Animate each polygon upward, possibly rotating
       tl.to(selector, {
-        duration: 3,
+        duration: 4,
         x: randX,
         y: randY,
         rotation: randRot,
-        transformOrigin: "50% 100%", // pivot from bottom center
+        transformOrigin: "50% 100%",
         ease: "power2.inOut"
-      }, 0); // all start at timeline position 0
+      }, 0); // all start at timeline time 0
     });
 
-    // Optionally fade them out near the bottom
+    // Optional fade out near the bottom
     tl.to(crystals, {
       duration: 1.5,
       opacity: 0
     }, ">-0.5");
   </script>
 
-  <!-- Your Custom Script (Optional) -->
-  <!-- <script src="static/js/script.js"></script> -->
 </body>
 </html>
