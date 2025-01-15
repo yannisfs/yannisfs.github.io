@@ -1,46 +1,26 @@
-    /* Basic Page Setup */
-    html, body {
-        margin: 0;
-        padding: 0;
-        /* Ensure there's enough height for scrolling */
-        height: 200vh;
-        font-family: sans-serif;
-        position: relative;
-        overflow-x: hidden;
-      }
-  
-      h1 {
-        text-align: center;
-        margin-top: 2rem;
-      }
-  
-      /* A bit of filler content to scroll through */
-      .content {
-        width: 80%;
-        max-width: 800px;
-        margin: 3rem auto;
-        padding: 1rem;
-        border-radius: 8px;
-        box-shadow: 0 0 5px rgba(0,0,0,0.1);
-      }
-  
-      /* The container that holds the crystal SVG at the bottom */
-      .crystal-container {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 300px;       /* matches the SVG's coordinate height (viewBox 0..300) */
-        z-index: -1;         /* behind the content */
-        pointer-events: none;/* clicks pass through */
-        overflow: visible;   /* in case we animate them upwards */
-      }
-  
-      /* Make the inline SVG fill the container’s width and height */
-      #crystal-svg {
-        display: block;
-        width: 100%;
-        height: 100%;
-        /* Ensures bottom alignment within the 300px container */
-        preserveAspectRatio: xMidYMax meet;
-      }
+:root {
+    --primary: #000000;
+    --secondary: #757575;
+}
+
+body{
+    background-color: #D6D8DA;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+svg{
+    width: 20vh;
+    overflow: visible;
+}
+
+.reveal{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    background: #080808;
+}

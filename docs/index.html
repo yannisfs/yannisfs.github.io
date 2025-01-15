@@ -1,242 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Netarch Fixed Layout</title>
+    <head>
+    <meta charset="UTF-8" />
+    <title>netarch 2025</title>
 
-  <!-- Responsive for mobile -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-  <!-- GSAP + ScrollTrigger (CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <!-- Google Search Verification Tag-->
+    <meta name="google-site-verification" content="snQ83qugK9pGb-jvhta9NohbepOSY3ZaAvw58kk79xo" />
 
-  <style>
-    /* ---------------------------------------------------
-       RESET & BASIC PAGE LAYOUT
-    --------------------------------------------------- */
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;           /* For 100vh calculations */
-      overflow-x: hidden;     /* Avoid horizontal scroll */
-      font-family: sans-serif;
-      background: transparent !important; /* Keep background transparent so SVG shows through */
-      position: relative;
-    }
+    <!-- Data for Quicklink scrapers -->
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Netarch Agency" />
+    <meta property="og:description" content="Network Architecture & Website Solutions" />
+    <meta property="og:url" content="https://netarch.co" />
+    <meta property="og:image" content="https://netarch.co/static/images/Quicklink_Thumbnail_Netarch.png" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image" content="https://netarch.co/static/images/Quicklink_Thumbnail_Square_Netarch.png" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:type" content="website" />
 
-    /* ---------------------------------------------------
-       FULL-VIEWPORT BACKGROUND SVG
-    --------------------------------------------------- */
-    .background-svg-wrap {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;          /* Fill full viewport width */
-      height: 100vh;         /* Fill full viewport height */
-      z-index: -1;           /* Behind other elements */
-      pointer-events: none;  /* Don’t intercept clicks */
-      overflow: hidden;      /* Hide any oversize animation */
-    }
+    <!-- Twitter Card tags-->
+    <meta name="twitter:card" content="Company Logo" />
+    <meta name="twitter:title" content="Netarch Agency" />
+    <meta name="twitter:description" content="Network Architecture & Website Solutions" />
+    <meta name="twitter:image" content="https://netarch.co/static/images/Quicklink_Thumbnail_Netarch.png" />
 
-    #background-svg {
-      width: 100%;
-      height: 100%;
-      display: block;
-      /* 
-         Large coordinate space (e.g. 1920 x 1080). 
-         'slice' prevents empty margins but can crop edges 
-      */
-    }
+    <!-- link to favicon-->
+    <link rel="shortcut icon" href="static/images/favicon.png" type="image/png" />
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="static/css/styles.css" />
+    </head>
+    <body>
+        <svg height="1080.0px" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" viewBox="0 0 1920 1080" width="1920.0px" xml:space="preserve">
+            <g id="Logo">
+            <path d="M725.892 294.763L725.892 785.237L787.565 785.237L787.565 650.284L916.395 785.237L1003.61 785.237L787.565 558.879L787.565 398.514L1138.1 785.237L1194.11 785.237L1194.11 294.763L1132.48 294.763L1132.48 429.716L1003.65 294.763L916.44 294.763L1132.48 521.121L1132.48 681.533L781.946 294.763L725.892 294.763Z" fill="#a5a4a2" fill-rule="nonzero" opacity="0.8" stroke="none"/>
+            </g>
+            <g id="Title">
+            <g fill="#18243b" opacity="1" stroke="none">
+            <path d="M473.963 447.261L506.122 447.261L607.661 610.108L607.661 447.261L633.525 447.261L633.525 648.288L603.008 648.288L499.964 485.578L499.964 648.288L473.963 648.288L473.963 447.261Z"/>
+            <path d="M734.107 498.442C744.507 498.442 754.588 500.882 764.349 505.763C774.111 510.644 781.546 516.961 786.655 524.716C791.582 532.106 794.866 540.727 796.508 550.58C797.968 557.331 798.698 568.096 798.698 582.875L691.274 582.875C691.73 597.746 695.242 609.674 701.811 618.661C708.38 627.647 718.552 632.14 732.328 632.14C745.191 632.14 755.454 627.898 763.118 619.413C767.497 614.487 770.599 608.785 772.423 602.307L796.645 602.307C796.006 607.69 793.885 613.688 790.282 620.303C786.678 626.917 782.641 632.322 778.171 636.519C770.69 643.817 761.43 648.744 750.391 651.298C744.461 652.758 737.756 653.488 730.275 653.488C712.029 653.488 696.565 646.851 683.884 633.577C671.203 620.303 664.863 601.714 664.863 577.812C664.863 554.275 671.249 535.162 684.021 520.474C696.793 505.786 713.488 498.442 734.107 498.442ZM773.381 563.306C772.378 552.632 770.051 544.102 766.402 537.716C759.651 525.856 748.384 519.926 732.601 519.926C721.289 519.926 711.801 524.009 704.137 532.174C696.474 540.339 692.414 550.717 691.958 563.306L773.381 563.306Z"/>
+            <path d="M833.867 460.809L858.773 460.809L858.773 501.726L882.174 501.726L882.174 521.842L858.773 521.842L858.773 617.497C858.773 622.606 860.506 626.027 863.973 627.761C865.889 628.764 869.082 629.266 873.552 629.266C874.738 629.266 876.016 629.243 877.384 629.198C878.752 629.152 880.349 629.038 882.174 628.856L882.174 648.288C879.345 649.109 876.403 649.702 873.347 650.067C870.291 650.432 866.984 650.614 863.426 650.614C851.931 650.614 844.13 647.672 840.025 641.787C835.92 635.903 833.867 628.263 833.867 618.866L833.867 521.842L814.024 521.842L814.024 501.726L833.867 501.726L833.867 460.809Z"/>
+            <path d="M925.691 609.287C925.691 616.403 928.291 622.013 933.491 626.119C938.691 630.224 944.849 632.277 951.965 632.277C960.632 632.277 969.025 630.27 977.145 626.255C990.829 619.596 997.671 608.694 997.671 593.549L997.671 573.707C994.661 575.623 990.783 577.219 986.039 578.496C981.295 579.774 976.643 580.686 972.081 581.233L957.165 583.149C948.224 584.335 941.519 586.205 937.049 588.76C929.477 593.048 925.691 599.89 925.691 609.287ZM985.355 559.475C991.012 558.745 994.798 556.373 996.713 552.359C997.808 550.169 998.356 547.022 998.356 542.916C998.356 534.523 995.368 528.434 989.392 524.648C983.417 520.861 974.864 518.968 963.734 518.968C950.87 518.968 941.747 522.435 936.364 529.369C933.354 533.2 931.392 538.902 930.48 546.474L907.49 546.474C907.946 528.411 913.808 515.844 925.075 508.773C936.342 501.703 949.41 498.168 964.281 498.168C981.524 498.168 995.527 501.452 1006.29 508.021C1016.97 514.589 1022.3 524.807 1022.3 538.674L1022.3 623.108C1022.3 625.662 1022.83 627.715 1023.88 629.266C1024.93 630.817 1027.14 631.592 1030.51 631.592C1031.61 631.592 1032.84 631.524 1034.21 631.387C1035.58 631.25 1037.04 631.045 1038.59 630.771L1038.59 648.972C1034.76 650.067 1031.84 650.751 1029.83 651.025C1027.82 651.298 1025.09 651.435 1021.62 651.435C1013.13 651.435 1006.98 648.424 1003.15 642.403C1001.14 639.21 999.724 634.694 998.903 628.856C993.885 635.424 986.678 641.126 977.281 645.961C967.885 650.796 957.53 653.214 946.217 653.214C932.624 653.214 921.517 649.086 912.895 640.83C904.274 632.573 899.964 622.241 899.964 609.834C899.964 596.241 904.206 585.704 912.69 578.223C921.175 570.742 932.305 566.135 946.081 564.401L985.355 559.475Z"/>
+            <path d="M1063.36 501.726L1086.76 501.726L1086.76 527.042C1088.67 522.116 1093.37 516.117 1100.85 509.047C1108.33 501.977 1116.96 498.442 1126.72 498.442C1127.17 498.442 1127.95 498.487 1129.04 498.578C1130.14 498.67 1132.01 498.852 1134.65 499.126L1134.65 525.126C1133.19 524.853 1131.85 524.67 1130.62 524.579C1129.39 524.488 1128.04 524.442 1126.58 524.442C1114.17 524.442 1104.64 528.434 1097.98 536.416C1091.32 544.399 1087.99 553.59 1087.99 563.991L1087.99 648.288L1063.36 648.288L1063.36 501.726Z"/>
+            <path d="M1212.52 497.484C1229.03 497.484 1242.47 501.498 1252.82 509.526C1263.17 517.554 1269.4 531.376 1271.5 550.99L1247.55 550.99C1246.09 541.959 1242.76 534.455 1237.56 528.479C1232.36 522.504 1224.01 519.516 1212.52 519.516C1196.83 519.516 1185.61 527.179 1178.86 542.506C1174.48 552.45 1172.29 564.721 1172.29 579.317C1172.29 594.005 1175.39 606.367 1181.59 616.403C1187.8 626.438 1197.56 631.456 1210.88 631.456C1221.09 631.456 1229.19 628.331 1235.17 622.082C1241.14 615.832 1245.27 607.28 1247.55 596.423L1271.5 596.423C1268.76 615.855 1261.92 630.064 1250.97 639.051C1240.03 648.037 1226.02 652.53 1208.96 652.53C1189.8 652.53 1174.52 645.528 1163.12 631.524C1151.71 617.52 1146.01 600.027 1146.01 579.044C1146.01 553.317 1152.26 533.292 1164.76 518.968C1177.26 504.645 1193.18 497.484 1212.52 497.484Z"/>
+            <path d="M1296.13 446.577L1320.76 446.577L1320.76 521.568C1326.6 514.179 1331.85 508.979 1336.5 505.968C1344.44 500.768 1354.34 498.168 1366.2 498.168C1387.45 498.168 1401.87 505.603 1409.44 520.474C1413.55 528.593 1415.6 539.86 1415.6 554.275L1415.6 648.288L1390.28 648.288L1390.28 555.917C1390.28 545.152 1388.91 537.26 1386.18 532.242C1381.71 524.214 1373.31 520.2 1361 520.2C1350.78 520.2 1341.52 523.712 1333.22 530.737C1324.92 537.762 1320.76 551.036 1320.76 570.559L1320.76 648.288L1296.13 648.288L1296.13 446.577Z"/>
+            </g>
+            </g>
+        </svg>
 
-    /* ---------------------------------------------------
-       NAVBAR (Fixed at top)
-    --------------------------------------------------- */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 60px;                /* Navbar height */
-      background-color: rgba(255, 255, 255, 0.8); /* Semi-translucent */
-      display: flex;
-      align-items: center;
-      padding: 0 1rem;
-      box-sizing: border-box;
-      z-index: 1;
-    }
-
-    .logo {
-      height: 40px;  /* Adjust as needed */
-      width: auto;
-    }
-
-    /* ---------------------------------------------------
-       FOOTER BAR (Fixed at bottom)
-    --------------------------------------------------- */
-    .footbar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 50px;                /* Footer height */
-      background-color: rgba(255, 255, 255, 0.8);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1;
-    }
-
-    /* ---------------------------------------------------
-       MAIN HERO SECTION
-       Occupies space between the fixed navbar & footbar
-    --------------------------------------------------- */
-    .main-hero {
-      /* 
-         Full viewport minus nav & foot heights 
-         so it fills the “middle” area exactly
-      */
-      min-height: calc(100vh - 60px - 50px);
-      /* 
-         Add top & bottom padding so text isn’t
-         glued to the edges
-      */
-      padding-top: 60px;  /* matches navbar height */
-      padding-bottom: 50px; /* matches footbar height */
-
-      /* Center content */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-
-      /* Stacking above the background */
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-title {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      font-weight: 300;
-    }
-
-    .hero-sub {
-      font-size: 1.2rem;
-      font-weight: 300;
-      color: #666;
-    }
-
-    /* ---------------------------------------------------
-       MEDIA QUERY (Smaller Screens)
-    --------------------------------------------------- */
-    @media (max-width: 600px) {
-      .hero-title {
-        font-size: 1.5rem;
-      }
-      .hero-sub {
-        font-size: 1rem;
-      }
-      .logo {
-        height: 30px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- FULL-VIEWPORT SVG BACKGROUND -->
-  <div class="background-svg-wrap">
-    <svg 
-      id="background-svg"
-      viewBox="0 0 1920 1080"
-      preserveAspectRatio="xMidYMid slice"
-    >
-      <!-- Example Polygons (Crystals) anchored near y=1080 for bottom. Tweak as desired -->
-      <polygon 
-        id="crystal1"
-        points="200,1080 180,600 220,500 260,300 300,600 320,1080"
-        fill="#6CCFF6"
-      />
-      <polygon 
-        id="crystal2"
-        points="500,1080 470,550 490,400 540,250 590,500 610,1080"
-        fill="#82E0AA"
-      />
-      <polygon 
-        id="crystal3"
-        points="750,1080 710,700 730,600 770,450 800,600 820,700 840,1080"
-        fill="#F7DC6F"
-      />
-      <polygon 
-        id="crystal4"
-        points="1000,1080 980,600 1020,450 1080,350 1140,600 1160,1080"
-        fill="#F1948A"
-      />
-      <polygon 
-        id="crystal5"
-        points="1350,1080 1320,650 1360,550 1400,300 1440,550 1470,650 1500,1080"
-        fill="#D7BDE2"
-      />
-    </svg>
-  </div>
-
-  <!-- NAVBAR (fixed at top) -->
-  <div class="navbar">
-    <img class="logo" src="static/images/Netarch_logo_new.svg" alt="Netarch Logo">
-  </div>
-
-  <!-- MAIN HERO (fills remaining space) -->
-  <div class="main-hero">
-    <h1 class="hero-title">Network Architecture is our passion.</h1>
-    <h5 class="hero-sub">2025 - your year to go web public</h5>
-  </div>
-
-  <!-- FOOTER BAR (fixed at bottom) -->
-  <div class="footbar">
-    <p>presented by netarch</p>
-  </div>
-
-  <!-- GSAP + ScrollTrigger -->
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
-
-    const crystals = ["#crystal1", "#crystal2", "#crystal3", "#crystal4", "#crystal5"];
-
-    // Timeline that controls the entire scroll distance
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: document.body,
-        start: "top top",
-        end: "bottom bottom",
-        scrub: true
-      }
-    });
-
-    crystals.forEach(selector => {
-      // Example random offsets for a 1920x1080 space
-      const randX = gsap.utils.random(-100, 100);
-      const randY = gsap.utils.random(-300, -800);
-      const randRot = gsap.utils.random(-30, 30);
-
-      // Animate each polygon upward, possibly rotating
-      tl.to(selector, {
-        duration: 4,
-        x: randX,
-        y: randY,
-        rotation: randRot,
-        transformOrigin: "50% 100%",
-        ease: "power2.inOut"
-      }, 0);
-    });
-
-    // Optionally fade them out near the bottom
-    tl.to(crystals, {
-      duration: 1.5,
-      opacity: 0
-    }, ">-0.5");
-  </script>
-
-</body>
+        <div class="reveal">
+            
+        </div>
+    </body>
+    <script src="static/js/script.js"></script>
 </html>
