@@ -1,92 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta charset="UTF-8" />
-    <title>netarch 2025</title>
+<head>
+  <meta charset="UTF-8" />
+  <title>Crystal Spikes Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <!-- GSAP + ScrollTrigger (via CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
 
-    <!-- Google Search Verification Tag-->
-    <meta name="google-site-verification" content="snQ83qugK9pGb-jvhta9NohbepOSY3ZaAvw58kk79xo" />
+  <!-- Quick CSS -->
+  <style>
+    /* Page Reset & Basic Layout */
+    html, body {
+      margin: 0; 
+      padding: 0;
+      height: 200vh; /* Some extra height to allow scrolling */
+      font-family: sans-serif;
+      background: #f5f5f5;
+      position: relative;
+      overflow-x: hidden; 
+    }
 
-    <!-- Data for Quicklink scrapers -->
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Netarch Agency" />
-    <meta property="og:description" content="Network Architecture & Website Solutions" />
-    <meta property="og:url" content="https://netarch.co" />
-    <meta property="og:image" content="https://netarch.co/static/images/Quicklink_Thumbnail_Netarch.png" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image" content="https://netarch.co/static/images/Quicklink_Thumbnail_Square_Netarch.png" />
-    <meta property="og:image:height" content="512" />
-    <meta property="og:image:width" content="512" />
-    <meta property="og:type" content="website" />
+    h1 {
+      text-align: center;
+      margin-top: 2rem;
+    }
 
-    <!-- Twitter Card tags-->
-    <meta name="twitter:card" content="Company Logo" />
-    <meta name="twitter:title" content="Netarch Agency" />
-    <meta name="twitter:description" content="Network Architecture & Website Solutions" />
-    <meta name="twitter:image" content="https://netarch.co/static/images/Quicklink_Thumbnail_Netarch.png" />
+    /* Container for the crystals at the bottom */
+    .crystal-container {
+      position: fixed; /* Stays at bottom as user scrolls (could use absolute too) */
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50vh; /* Adjust as desired */
+      pointer-events: none; /* so clicks pass through */
+      z-index: -1; /* behind content */
+      overflow: visible;
+    }
 
-    <!-- link to favicon-->
-    <link rel="shortcut icon" href="static/images/favicon.png" type="image/png" />
-    <!-- Link to CSS -->
-    <link rel="stylesheet" href="static/css/styles.css" />
-    </head>
-    <body>
-        <div class="background-svg-wrap">
-            <svg id="background-svg" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
-                <defs>
-                <linearGradient gradientTransform="matrix(311.478 -101.3 101.3 311.478 951.901 1378.85)" gradientUnits="userSpaceOnUse" id="LinearGradient" x1="0" x2="1" y1="0" y2="0">
-                <stop offset="0" stop-color="#848dc1"/>
-                <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-                </linearGradient>
-                <linearGradient gradientTransform="matrix(395.481 54.3177 -54.3177 395.481 1106.51 1272.55)" gradientUnits="userSpaceOnUse" id="LinearGradient_2" x1="0" x2="1" y1="0" y2="0">
-                <stop offset="0" stop-color="#848dc1"/>
-                <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-                </linearGradient>
-                <linearGradient gradientTransform="matrix(359.503 173.532 -173.532 359.503 1270.95 1584.5)" gradientUnits="userSpaceOnUse" id="LinearGradient_3" x1="0" x2="1" y1="0" y2="0">
-                <stop offset="0" stop-color="#848dc1"/>
-                <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-                </linearGradient>
-                <linearGradient gradientTransform="matrix(305.789 256.611 -256.611 305.789 1427 1693.48)" gradientUnits="userSpaceOnUse" id="LinearGradient_4" x1="0" x2="1" y1="0" y2="0">
-                <stop offset="0" stop-color="#848dc1"/>
-                <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-                </linearGradient>
-                <linearGradient gradientTransform="matrix(361.831 -168.625 168.625 361.831 902.648 1881.31)" gradientUnits="userSpaceOnUse" id="LinearGradient_5" x1="0" x2="1" y1="0" y2="0">
-                <stop offset="0" stop-color="#848dc1"/>
-                <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-                </linearGradient>
-                <linearGradient gradientTransform="matrix(344.574 -201.555 201.555 344.574 745.021 2060.42)" gradientUnits="userSpaceOnUse" id="LinearGradient_6" x1="0" x2="1" y1="0" y2="0">
-                <stop offset="0" stop-color="#848dc1"/>
-                <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-                </linearGradient>
-                </defs>
-                <clipPath id="ArtboardFrame">
-                <rect height="1440" width="2560" x="0" y="0"/>
-                </clipPath>
-                <g clip-path="url(#ArtboardFrame)" id="Layer-1">
-                <path d="M893.814 720L1262.72 1274.36L1281.22 1939.99L912.318 1385.63L893.814 720Z" fill="url(#LinearGradient)" fill-rule="nonzero" opacity="1" stroke="none"/>
-                <path d="M1392.73 518.973L1502.96 1323.02L1169.71 2063.01L1059.49 1258.96L1392.73 518.973Z" fill="url(#LinearGradient_2)" fill-rule="nonzero" opacity="1" stroke="none"/>
-                <path d="M1775.44 955.783L1632.56 1754.67L1087.52 2355.98L1230.4 1557.09L1775.44 955.783Z" fill="url(#LinearGradient_3)" fill-rule="nonzero" opacity="1" stroke="none"/>
-                <path d="M2070.61 1208.13L1735.66 1947.35L1059.49 2396.16L1394.44 1656.94L2070.61 1208.13Z" fill="url(#LinearGradient_4)" fill-rule="nonzero" opacity="1" stroke="none"/>
-                <path d="M734.917 1092.85L1263.21 1708.92L1384.06 2511.44L855.765 1895.37L734.917 1092.85Z" fill="url(#LinearGradient_5)" fill-rule="nonzero" opacity="1" stroke="none"/>
-                <path d="M504.665 1290.99L1087.98 1855.24L1282.96 2643.04L699.649 2078.78L504.665 1290.99Z" fill="url(#LinearGradient_6)" fill-rule="nonzero" opacity="1" stroke="none"/>
-                </g>
-                </svg>
-        </div>
-        <div class="navbar">
-            <div class="navbar-item">
-                <img class="logo" src="static/images/Netarch_logo_new.svg" alt="Netarch">
-            </div>
-        </div>
-        <div class="main-hero">
-            <h1 class="hero-title">Network Architecture is our passion.</h1>
-            <h5 class="hero-sub">2025 - your year to go web public</h5>
-        </div>
-        <div class="footbar">
-            <p>presented by netarch</p>
-        </div>
-    </body>
-    <script src="static/js/script.js"></script>
+    /* Make sure the SVG fills the container horizontally */
+    #crystal-svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      /* "xMidYMax meet" ensures the bottom of the SVG aligns with bottom of the container */
+      /* You might also try 'xMidYMax slice' or 'none' if you want to adjust scaling. */
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Scroll Down to See the Crystals Break Apart</h1>
+
+  <!-- Some filler content for scrolling -->
+  <div style="height: 150vh; padding: 2rem;">
+    <p>Keep scrolling... the crystal spikes are at the bottom and will animate as you scroll!</p>
+  </div>
+
+  <!-- Container for our crystal SVG background -->
+  <div class="crystal-container">
+    <svg 
+      id="crystal-svg" 
+      viewBox="0 0 800 600" 
+      preserveAspectRatio="xMidYMax meet"
+    >
+      <!-- A few polygon spikes resembling crystals. 
+           Coordinates are chosen so that the base is near y=600 (the bottom).
+           Feel free to customize shapes and colors. -->
+      <polygon 
+        id="crystal1"
+        points="100,600 120,400 140,450 160,300 180,450 200,400 220,600"
+        fill="#6CCFF6"
+      />
+      <polygon 
+        id="crystal2"
+        points="220,600 230,450 250,420 270,360 290,420 310,450 320,600"
+        fill="#82E0AA"
+      />
+      <polygon
+        id="crystal3"
+        points="350,600 370,480 390,490 410,400 430,490 450,480 470,600"
+        fill="#F7DC6F"
+      />
+      <polygon 
+        id="crystal4"
+        points="500,600 510,420 530,350 550,380 570,350 590,420 600,600"
+        fill="#F1948A"
+      />
+      <polygon 
+        id="crystal5"
+        points="640,600 650,430 670,400 690,320 710,400 730,430 740,600"
+        fill="#D7BDE2"
+      />
+    </svg>
+  </div>
+
+  <script>
+    // Register plugins
+    gsap.registerPlugin(ScrollTrigger);
+
+    // We define an array of crystal IDs to animate
+    const crystals = ["#crystal1", "#crystal2", "#crystal3", "#crystal4", "#crystal5"];
+
+    // A timeline that triggers once the user starts scrolling
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "body", // or a specific section
+        start: "top top",  // animation starts at top of page
+        end: "bottom bottom", // you can adjust to control how far the effect continues
+        scrub: true,      // link the timeline progress to scroll
+      }
+    });
+
+    // For each crystal, we do an upward movement + rotation + partial "break-apart" effect
+    crystals.forEach((selector, i) => {
+      // Random (or semi-random) transform offsets so they "break apart" uniquely
+      const randX = gsap.utils.random(-40, 40);
+      const randY = gsap.utils.random(-200, -350);
+      const randRot = gsap.utils.random(-40, 40);
+
+      // Add animation to the timeline
+      tl.to(selector, {
+        duration: 3,
+        // We'll animate a few attributes:
+        // 1) The "shape" itself can shift with 'attr' if we want, or we can transform the polygon
+        // 2) We'll do a simple transform-based approach for better performance
+        x: randX,
+        y: randY,
+        rotation: randRot,
+        transformOrigin: "50% 100%", // pivot around the bottom center
+        ease: "power2.inOut"
+      }, 0); // Start them all together at timeline position 0
+    });
+
+    // Optionally, you can add a second step to fade them out or recolor
+    // Example: At the end, they fade out
+    tl.to(crystals, {
+      duration: 2,
+      opacity: 0,
+      ease: "power1.out"
+    }, ">-1"); // start this near the end
+  </script>
+</body>
 </html>
