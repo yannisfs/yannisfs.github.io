@@ -9,17 +9,17 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
 
-  <!-- Quick CSS -->
   <style>
-    /* Page Reset & Basic Layout */
+    /* Basic Page Setup */
     html, body {
-      margin: 0; 
+      margin: 0;
       padding: 0;
-      height: 200vh; /* Some extra height to allow scrolling */
+      /* Ensure there's enough height for scrolling */
+      height: 200vh;
       font-family: sans-serif;
       background: #f5f5f5;
       position: relative;
-      overflow-x: hidden; 
+      overflow-x: hidden;
     }
 
     h1 {
@@ -27,120 +27,124 @@
       margin-top: 2rem;
     }
 
-    /* Container for the crystals at the bottom */
-    .crystal-container {
-      position: fixed; /* Stays at bottom as user scrolls (could use absolute too) */
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 50vh; /* Adjust as desired */
-      pointer-events: none; /* so clicks pass through */
-      z-index: -1; /* behind content */
-      overflow: visible;
+    /* A bit of filler content to scroll through */
+    .content {
+      width: 80%;
+      max-width: 800px;
+      margin: 3rem auto;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
 
-    /* Make sure the SVG fills the container horizontally */
+    /* The container that holds the crystal SVG at the bottom */
+    .crystal-container {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 300px;       /* matches the SVG's coordinate height (viewBox 0..300) */
+      z-index: -1;         /* behind the content */
+      pointer-events: none;/* clicks pass through */
+      overflow: visible;   /* in case we animate them upwards */
+    }
+
+    /* Make the inline SVG fill the container’s width and height */
     #crystal-svg {
       display: block;
       width: 100%;
       height: 100%;
-      /* "xMidYMax meet" ensures the bottom of the SVG aligns with bottom of the container */
-      /* You might also try 'xMidYMax slice' or 'none' if you want to adjust scaling. */
+      /* Ensures bottom alignment within the 300px container */
+      preserveAspectRatio: xMidYMax meet;
     }
   </style>
 </head>
 
 <body>
-  <h1>Scroll Down to See the Crystals Break Apart</h1>
-
-  <!-- Some filler content for scrolling -->
-  <div style="height: 150vh; padding: 2rem;">
-    <p>Keep scrolling... the crystal spikes are at the bottom and will animate as you scroll!</p>
+  <h1>Scroll Down to See Crystals Break Apart</h1>
+  <div class="content">
+    <p>This is some placeholder text to create scrollable content. Keep scrolling and watch the crystals at the bottom animate upwards as you go!</p>
   </div>
 
-  <!-- Container for our crystal SVG background -->
+  <!-- Crystal SVG Container -->
   <div class="crystal-container">
     <svg 
       id="crystal-svg" 
-      viewBox="0 0 800 600" 
+      viewBox="0 0 800 300"
       preserveAspectRatio="xMidYMax meet"
     >
-      <!-- A few polygon spikes resembling crystals. 
-           Coordinates are chosen so that the base is near y=600 (the bottom).
-           Feel free to customize shapes and colors. -->
+      <!-- Crystal 1 -->
       <polygon 
         id="crystal1"
-        points="100,600 120,400 140,450 160,300 180,450 200,400 220,600"
+        points="100,300 120,150 140,200 160,80 180,200 200,150 220,300"
         fill="#6CCFF6"
       />
+      <!-- Crystal 2 -->
       <polygon 
         id="crystal2"
-        points="220,600 230,450 250,420 270,360 290,420 310,450 320,600"
+        points="250,300 260,120 280,90 300,60 320,90 340,120 350,300"
         fill="#82E0AA"
       />
-      <polygon
+      <!-- Crystal 3 -->
+      <polygon 
         id="crystal3"
-        points="350,600 370,480 390,490 410,400 430,490 450,480 470,600"
+        points="390,300 410,220 430,230 450,140 470,230 490,220 510,300"
         fill="#F7DC6F"
       />
+      <!-- Crystal 4 -->
       <polygon 
         id="crystal4"
-        points="500,600 510,420 530,350 550,380 570,350 590,420 600,600"
+        points="540,300 550,140 570,70 590,100 610,70 630,140 640,300"
         fill="#F1948A"
       />
+      <!-- Crystal 5 -->
       <polygon 
         id="crystal5"
-        points="640,600 650,430 670,400 690,320 710,400 730,430 740,600"
+        points="670,300 680,130 700,100 720,40 740,100 760,130 770,300"
         fill="#D7BDE2"
       />
     </svg>
   </div>
 
   <script>
-    // Register plugins
+    // Register GSAP plugins
     gsap.registerPlugin(ScrollTrigger);
 
-    // We define an array of crystal IDs to animate
+    // Array of crystal IDs
     const crystals = ["#crystal1", "#crystal2", "#crystal3", "#crystal4", "#crystal5"];
 
-    // A timeline that triggers once the user starts scrolling
+    // Create a timeline linked to scroll
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: "body", // or a specific section
-        start: "top top",  // animation starts at top of page
-        end: "bottom bottom", // you can adjust to control how far the effect continues
-        scrub: true,      // link the timeline progress to scroll
+        trigger: document.body, // animate throughout the full page
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true,       // links animation progress to scroll
       }
     });
 
-    // For each crystal, we do an upward movement + rotation + partial "break-apart" effect
-    crystals.forEach((selector, i) => {
-      // Random (or semi-random) transform offsets so they "break apart" uniquely
+    // Animate each crystal "breaking" upward with random offsets
+    crystals.forEach((selector) => {
       const randX = gsap.utils.random(-40, 40);
-      const randY = gsap.utils.random(-200, -350);
-      const randRot = gsap.utils.random(-40, 40);
+      const randY = gsap.utils.random(-150, -300);
+      const randRot = gsap.utils.random(-30, 30);
 
-      // Add animation to the timeline
       tl.to(selector, {
         duration: 3,
-        // We'll animate a few attributes:
-        // 1) The "shape" itself can shift with 'attr' if we want, or we can transform the polygon
-        // 2) We'll do a simple transform-based approach for better performance
         x: randX,
         y: randY,
         rotation: randRot,
-        transformOrigin: "50% 100%", // pivot around the bottom center
+        transformOrigin: "50% 100%", // pivot from bottom center
         ease: "power2.inOut"
-      }, 0); // Start them all together at timeline position 0
+      }, 0); // Start all at timeline position 0
     });
 
-    // Optionally, you can add a second step to fade them out or recolor
-    // Example: At the end, they fade out
+    // Optionally fade them out near the end
     tl.to(crystals, {
-      duration: 2,
-      opacity: 0,
-      ease: "power1.out"
-    }, ">-1"); // start this near the end
+      duration: 1.5,
+      opacity: 0
+    }, ">-0.5"); // start fade near the end
   </script>
 </body>
 </html>
