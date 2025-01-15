@@ -68,14 +68,7 @@
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        const tl = gsap.timeline({defaults: { 
-        ease: 'power4.out, duration: .7', 
-        scrollTrigger: {
-            trigger: document.body,
-            start: "top top",
-            end: "bottom bottom",
-            scrub: true
-        }}});
+        const tl = gsap.timeline({defaults: { ease: 'power4.out, duration: .7'}});
 
         gsap.set('g', {
             autoAlpha : 1,
@@ -86,7 +79,7 @@
             scale : 10
         });
 
-        gsap.set(['#Title', '#Logo-2', '#Logo-3'], {
+        gsap.set('#Title', {
             opacity : 0
         });
 
@@ -94,6 +87,24 @@
             scale : 1.2,
             duration : 5
         });
+
+        gsap.to('#Logo-1', {
+            x : 50,
+            y : 50,
+            duration : 0.5
+        });
+
+        gsap.to('#Logo-3', {
+            x : -50,
+            y : -50,
+            duration : 0.5
+        });
+
+        gsap.to(['#Logo-1', '#Logo-2', 'Logo-3'], {
+            x: -300,
+            duration : 0.8,
+            delay: 0.5
+        })
     </script>
     <script src="static/js/main.js"></script>
 </html>
