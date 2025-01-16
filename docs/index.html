@@ -88,12 +88,12 @@
             duration : 4
         });
 
-        tl.to('#Logo-1', {
+        gsap.to('#Logo-1', {
             x : -580,
             y : 580,
             duration : 0.5
-        })
-          .to('#Logo-3', {
+        });
+        gsap.to('#Logo-3', {
             x : 580,
             y : -580,
             duration : 0.5
@@ -105,8 +105,8 @@
         },{
             x : -1580,
             y : 580,
-            delay : .5,
-            duration : .8
+            delay : 0.5,
+            duration : 0.8
         });
 
         gsap.fromTo('#Logo-3', {
@@ -115,14 +115,14 @@
         },{
             x : -420,
             y : -580,
-            delay : .5,
-            duration : .8
+            delay : 0.5,
+            duration : 0.8
         });
 
         gsap.too('#Logo-2', {
             x : -1000,
-            delay : .5,
-            duration : .8
+            delay : 0.5,
+            duration : 0.8
         });
     </script>
     <script src="static/js/main.js"></script>
