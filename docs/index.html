@@ -83,28 +83,27 @@
             opacity : 0
         });
 
-        gsap.to('svg', {
+        tl.to('svg', {
             scale : 1.1,
-            duration : 5
+            duration : 4
         });
 
-        gsap.to('#Logo-1', {
+        tl.to('#Logo-1', {
             x : -580,
             y : 580,
             duration : 0.5
         });
 
-        gsap.to('#Logo-3', {
+        tl.to('#Logo-3', {
             x : 580,
             y : -580,
             duration : 0.5
         });
 
-        // gsap.to(['#Logo-1', '#Logo-2', '#Logo-3'], {
-        //     x: -100,
-        //     duration : 0.8,
-        //     delay: 0.5
-        // });
+        tl.to(['#Logo-1', '#Logo-2', '#Logo-3'], {
+            x: -100,
+            duration : 0.8
+        });
     </script>
     <script src="static/js/main.js"></script>
 </html>
