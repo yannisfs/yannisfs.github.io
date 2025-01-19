@@ -88,19 +88,18 @@
             duration : 4
         });
 
-        gsap.to('#Logo-1', {
+        tl.to('#Logo-1', {
             x : -580,
             y : 580,
             duration : 0.5
-        });
-        
-        gsap.to('#Logo-3', {
+        })
+            .to('#Logo-3', {
             x : 580,
             y : -580,
             duration : 0.5
         });
 
-        gsap.fromTo('#Logo-1', {
+        tl.fromTo('#Logo-1', {
             x : -580,
             y : 580,
         },{
@@ -110,7 +109,7 @@
             duration : 0.8
         });
 
-        gsap.fromTo('#Logo-3', {
+        tl.fromTo('#Logo-3', {
             x : 580,
             y : -580,
         },{
@@ -120,7 +119,7 @@
             duration : 0.8
         });
 
-        gsap.to('#Logo-2', {
+        tl.to('#Logo-2', {
             x : -1000,
             delay : 0.5,
             duration : 0.8
