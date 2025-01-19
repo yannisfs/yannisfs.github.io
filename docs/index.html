@@ -102,24 +102,30 @@
         }, 'logo_animate');
 
         tl
-            .add('logo_text_animate')
+            .add('logo_title_animate')
             .to('#Logo-1', {
             x : -2080,
             y : 580,
             duration : 0.8,
             immediateRender: false
-        }, 'logo_text_animate')
+        }, 'logo_title_animate')
             .to('#Logo-2', {
             x : -1500,
             duration : 0.8,
             immediateRender: false
-        }, 'logo_text_animate')
+        }, 'logo_title_animate')
             .to('#Logo-3',  {
             x : -920,
             y : -580,
             duration : 0.8,
             immediateRender: false
-        }, 'logo_text_animate');
+        }, 'logo_title_animate')
+            .to('#Title', {
+                x : 500,
+                opacity : 1,
+                duration : 0.8,
+                immediateRender: false
+            },'logo_title_animate');
 
     </script>
     <script src="static/js/main.js"></script>
