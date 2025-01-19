@@ -66,26 +66,16 @@
         </div>
     </body>
     <script>
-        gsap.registerPlugin(ScrollTrigger);
-
         const tl = gsap.timeline({defaults: { ease: 'power4.out, duration: .7'}});
 
         gsap.set('g', {
             autoAlpha : 1,
-        });
-
-        gsap.set('g', {
             transformOrigin : "50% 50%",
             scale : 5
         });
 
         gsap.set('#Title', {
             opacity : 0
-        });
-
-        gsap.to('svg', {
-            scale : 1.1,
-            duration : 4
         });
 
         tl
