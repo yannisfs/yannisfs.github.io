@@ -103,11 +103,23 @@
 
         tl
             .add('logo_text_animate')
-            .to(['#Logo-1', '#Logo-2', '#Logo-3'], {
-            x : -1500,
+            .to('#Logo-1', {
+            x : -1580,
+            y : 580,
             duration : 0.8,
             immediateRender: false
-        }, 'logo_text_animate');
+        }, 'logo_text_animate')
+            .to('#Logo-2', {
+            x : -1000,
+            duration : 0.8,
+            immediateRender: false
+            }, 'logo_text_animate')
+            .to('#Logo-3',  {
+            x : -420,
+            y : -580,
+            duration : 0.8,
+            immediateRender: false
+            })
 
     </script>
     <script src="static/js/main.js"></script>
