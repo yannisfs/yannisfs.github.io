@@ -29,3 +29,10 @@ g {
     z-index: -1;
     background: white;
 }
+
+
+@media (max-width:600px){
+    svg{
+        width: 10vh;
+    }
+}
