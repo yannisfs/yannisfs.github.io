@@ -33,6 +33,6 @@ g {
 
 @media (max-width:600px){
     svg{
-        width: 10vh;
+        scale: 0.4;
     }
 }
