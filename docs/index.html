@@ -108,10 +108,13 @@
             duration : 0.8,
             immediateRender: false
         }, 'logo_title_animate')
-            .to('#Title', {
+            .fromTo('#Title', {
+                x : 700
+        }, {
                 x : 1300,
                 opacity : 1,
-                duration : 0.8,
+                delay: 0.2,
+                duration : 0.6,
                 immediateRender: false
         },'logo_title_animate');
 
