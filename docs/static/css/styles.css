@@ -31,7 +31,7 @@ g {
 }
 
 
-@media (max-width:600px){
+@media (max-width: 840px){
     svg{
         scale: 0.4;
     }
