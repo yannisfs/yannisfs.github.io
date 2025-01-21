@@ -71,7 +71,7 @@
             scale : 5
         });
 
-        gsap.set('#Title', {
+        gsap.set(['#Title', '.swipe-indicator'], {
             opacity : 0
         });
 
@@ -115,7 +115,12 @@
                 delay: 0.2,
                 duration : 0.6,
                 immediateRender: false
-        },'logo_title_animate');
+        },'logo_title_animate')
+            .to('.swipe-indicator', {
+                opacity: 1,
+                delay: 0.3,
+                duration: 0.5
+            }, 'logo_title_animate')
 
     </script>
     <script src="static/js/main.js"></script>
