@@ -20,7 +20,7 @@ body{
     align-items: center;
 }
 
-svg{
+.entrance-graphic{
     width: 20vh;
     overflow: visible;
 }
@@ -30,13 +30,18 @@ g {
     visibility: hidden;
 }
 
-#swipe-indicator{
+.swipe-indicator{
     scale: 0.2;
 }
 
 
 @media (max-width: 840px){
-    svg{
+    .entrance-graphic{
+        height: 800px;
         scale: 0.4;
     }
+    .swipe-indicator{
+        scale: 0.08;
+    }
+
 }
