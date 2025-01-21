@@ -30,16 +30,8 @@ g {
     visibility: hidden;
 }
 
-.ta-remind{
-    height: 2vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 #swipe-indicator{
-    scale: 0.3;
+    scale: 0.2;
 }
 
 .reveal{
