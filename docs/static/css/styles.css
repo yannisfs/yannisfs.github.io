@@ -6,6 +6,7 @@
 body{
     background-color: #ebedef;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -27,6 +28,13 @@ svg{
 g {
     overflow: hidden;
     visibility: hidden;
+}
+
+.ta-remind{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .reveal{
