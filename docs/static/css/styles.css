@@ -37,7 +37,7 @@ g {
 
 @media (max-width: 840px){
     .entrance-graphic{
-        height: 800px;
+        height: 15vh;
         scale: 0.4;
     }
 }
