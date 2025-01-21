@@ -21,7 +21,8 @@ body{
 }
 
 .entrance-graphic{
-    width: 20vh;
+    height: 95vh;
+    width: 20vw;
     overflow: visible;
 }
 
@@ -38,6 +39,6 @@ g {
 @media (max-width: 840px){
     .entrance-graphic{
         height: 70vh;
-        width: 8vh;
+        width: 8vw;
     }
 }
