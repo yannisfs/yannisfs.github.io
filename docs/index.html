@@ -9,7 +9,7 @@
 
     <!-- Search Engine Tags-->
     <meta name="google-site-verification" content="snQ83qugK9pGb-jvhta9NohbepOSY3ZaAvw58kk79xo" />
-    
+
     <meta name="description" content="Mit Netarch moderne Open Source Lösungen entdecken und von top Leistungen in der Softwareentwicklung profitieren:  
     Unser Software engineering approach setzt auf den Grundsatz „no code = no result“, um digitale Projekte nachhaltig umzusetzen.
     Dabei stehen ein überzeugendes UI, eine intuitive UX, Webdesign und Branding im Mittelpunkt, sodass Anwendungen nicht nur technisch, sondern auch optisch überzeugen.
@@ -73,9 +73,6 @@
         <svg class="swipe-indicator" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
             <path d="M 25 75 L 100 150 L 175 75" fill="transparent"  opacity="1" stroke="rgba(0 , 0, 0, 0.4)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <div class="main-content">
-
-        </div>
     </body>
     <script>
         const tl = gsap.timeline({defaults: { ease: 'power4.out, duration: .7'}});
@@ -89,10 +86,6 @@
         gsap.set(['#Title', '.swipe-indicator'], {
             opacity : 0
         });
-        
-        gsap.set('.main-content', {
-            autoAlpha : 0
-        })
 
         tl
             .add('logo_animate')
@@ -140,11 +133,6 @@
                 delay: 0.3,
                 duration: 0.5
         }, 'logo_title_animate');
-
-        tl.to('.main-content', {
-            autoAlpha : 1,
-            duration : 0.1
-        });
     </script>
     <script src="static/js/main.js"></script>
 </html>
