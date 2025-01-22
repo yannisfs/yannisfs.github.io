@@ -9,13 +9,42 @@
     box-sizing: border-box;
 }
 
-body{
+
+body {
     background-color: #ebedef;
+    width: 100%;
+
+}
+
+
+.entrance-section {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    height: 100vh;
+}
+
+.entrance-graphic {
+    height: 90vh;
+    width: auto;
+    overflow: visible;
+}
+
+.swipe-indicator {
+    scale: 0.2;
+}
+
+g {
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.main-content {
+    min-height: 100vh;
+    padding: 2rem;
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out;
 }
 
 .quick-menu {
@@ -26,28 +55,8 @@ body{
     align-items: center;
 }
 
-.entrance-graphic{
-    height: 98vh;
-    width: 20vw;
-    overflow: visible;
-}
-
-g {
-    overflow: hidden;
-    visibility: hidden;
-}
-
-.swipe-indicator{
-    scale: 0.2;
-}
-
-.main-content{
-    height: 100vh;
-}
-
-
-@media (max-width: 840px){
-    .entrance-graphic{
+@media (max-width: 840px) {
+    .entrance-graphic {
         height: 70vh;
     }
 }
