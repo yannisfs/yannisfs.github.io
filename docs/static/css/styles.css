@@ -45,6 +45,10 @@ g {
 }
 
 .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-height: 20vh;
     width: 100vw;
     padding: 2rem;
