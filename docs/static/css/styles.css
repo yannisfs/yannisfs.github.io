@@ -3,6 +3,12 @@
     --secondary: #757575;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     background-color: #ebedef;
     display: flex;
@@ -33,6 +39,10 @@ g {
 
 .swipe-indicator{
     scale: 0.2;
+}
+
+.main-content{
+    height: 100vh;
 }
 
 

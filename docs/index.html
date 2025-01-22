@@ -61,6 +61,9 @@
         <svg class="swipe-indicator" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
             <path d="M 25 75 L 100 150 L 175 75" fill="transparent"  opacity="1" stroke="rgba(0 , 0, 0, 0.4)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
+        <div class="main-content">
+
+        </div>
     </body>
     <script>
         const tl = gsap.timeline({defaults: { ease: 'power4.out, duration: .7'}});
@@ -74,6 +77,10 @@
         gsap.set(['#Title', '.swipe-indicator'], {
             opacity : 0
         });
+        
+        gsap.set('.main-content', {
+            autoAlpha : 0
+        })
 
         tl
             .add('logo_animate')
@@ -120,8 +127,12 @@
                 opacity: 1,
                 delay: 0.3,
                 duration: 0.5
-            }, 'logo_title_animate')
+        }, 'logo_title_animate');
 
+        tl.to('.main-content', {
+            autoAlpha : 1,
+            duration : 0.1
+        });
     </script>
     <script src="static/js/main.js"></script>
 </html>
