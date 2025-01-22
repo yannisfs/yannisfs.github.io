@@ -1,6 +1,7 @@
 :root {
     --primary: #000000;
     --secondary: #757575;
+    --netarch-sig: #18243b;
 }
 
 * {
@@ -44,10 +45,11 @@ g {
 }
 
 .main-content {
-    min-height: 100vh;
+    min-height: 20vh;
     padding: 2rem;
     opacity: 0; 
     transition: opacity 0.5s ease-in-out;
+    background: var(--netarch-sig);
 }
 
 .quick-menu {
