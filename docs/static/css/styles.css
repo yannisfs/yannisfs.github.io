@@ -54,7 +54,8 @@ g {
     padding: 2rem;
     opacity: 0; 
     transition: opacity 0.5s ease-in-out;
-    background: var(--netarch-sig);
+    background: rgba(24, 36, 59, 0.7); /* just --netarch-sig with lower opacity */
+    backface-visibility: 0.5;
 }
 
 .quick-menu {
