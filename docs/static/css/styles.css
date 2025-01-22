@@ -46,6 +46,7 @@ g {
 
 .main-content {
     min-height: 20vh;
+    width: 100vw;
     padding: 2rem;
     opacity: 0; 
     transition: opacity 0.5s ease-in-out;
