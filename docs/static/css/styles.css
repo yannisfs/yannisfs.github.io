@@ -69,12 +69,24 @@ g {
 
 .slogan h1{
     width: 50vw;
+    animation: slogan-scroll ease-out;
+    animation-timeline: view();
 }
 
 .slogan p{
-     width: 50vw;
+    width: 50vw;
+    animation: slogan-scroll ease-out;
+    animation-timeline: view();
 }
 
+@keyframes slogan-scroll{
+    0%{
+        maring-left: 100vw;
+    }
+    100%{
+        maring-left: 0;
+    }
+}
 
 
 .quick-menu {
