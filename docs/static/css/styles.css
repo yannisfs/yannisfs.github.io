@@ -2,7 +2,7 @@
     --primary: #000000;
     --secondary: #757575;
     --netarch-sig-primary: #18243b;
-    --netarch-sig-secondary: rgba(24, 36, 59, 0.7);
+    --netarch-sig-secondary: rgba(24, 36, 59, 0.2);
 }
 
 * {
