@@ -69,18 +69,12 @@ g {
 
 .slogan h1{
     width: 50vw;
-    animation: slogan-scroll ease-out;
-    animation-timeline: view();
-    animation-range-start: cover;
-    animation-range-end: contain;
+    animation: slogan-scroll 1s ease forwards;
 }
 
 .slogan p{
     width: 50vw;
-    animation: slogan-scroll ease-out;
-    animation-timeline: view();
-    animation-range-start: cover;
-    animation-range-end: contain;
+    animation: slogan-scroll 1s ease forwards;
 }
 
 @keyframes slogan-scroll{
