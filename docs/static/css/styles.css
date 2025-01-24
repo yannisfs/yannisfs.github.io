@@ -58,15 +58,25 @@ g {
 
 }
 
-.wd-slogan{
+.slogan{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
     width: 100vw;
+    height: 80vh;
     background: var(--netarch-sig-secondary);
 }
 
-.gd-slogan{
-    width: 100vw;
-    background: rgba(24, 36, 59, 0.5); /* just --netarch-sig-secondary with lower opacity */
+.slogan h1{
+    width: 50vw;
 }
+
+.slogan p{
+     width: 50vw;
+}
+
+
 
 .quick-menu {
     width: 100%;
