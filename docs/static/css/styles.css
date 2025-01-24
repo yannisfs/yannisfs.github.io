@@ -70,13 +70,13 @@ g {
 .slogan h1{
     width: 50vw;
     animation: slogan-scroll ease-out;
-    animation-timeline: view();
+    animation-timeline: scroll();
 }
 
 .slogan p{
     width: 50vw;
     animation: slogan-scroll ease-out;
-    animation-timeline: view();
+    animation-timeline: scroll();
 }
 
 @keyframes slogan-scroll{
