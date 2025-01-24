@@ -95,10 +95,6 @@
             opacity : 0
         });
 
-        gsap.set('.main-content', {
-            autoAlpha : 0
-        });
-
         tl
             .add('logo_animate')
             .to('#Logo-1', {
@@ -145,11 +141,6 @@
                 delay: 0.3,
                 duration: 0.5
             }, 'logo_title_animate');
-
-        tl.to('.main-content', {
-            autoAlpha : 1,
-            duration : 0.1
-        });
     </script>
     <script src="static/js/main.js"></script>
 </html>
