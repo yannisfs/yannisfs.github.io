@@ -69,7 +69,7 @@ g {
 
 .slogan h1{
     width: 50vw;
-    animation: slogan-scroll 1s ease forwards;
+    animation: slogan-scroll 1s ease infinite forwards;
 }
 
 .slogan p{
@@ -78,10 +78,10 @@ g {
 }
 
 @keyframes slogan-scroll{
-    0%{
+    from{
         maring-left: 100vw;
     }
-    100%{
+    to{
         maring-left: 0;
     }
 }
