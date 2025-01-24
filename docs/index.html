@@ -96,7 +96,8 @@
         });
 
         gsap.set('.main-content', {
-            autoAlpha : 0
+            autoAlpha : 0,
+            display: none
         });
 
         tl
@@ -148,6 +149,7 @@
 
         tl.to('.main-content', {
             autoAlpha : 1,
+            display: flex,
             duration : 0.1
         });
     </script>
