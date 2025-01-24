@@ -62,7 +62,7 @@ g {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     width: 100vw;
     height: 80vh;
     background: var(--netarch-sig-secondary);
