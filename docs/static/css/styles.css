@@ -63,7 +63,7 @@ g {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    min-height: 40vh;
+    min-height: 50vh;
     background: var(--netarch-sig-secondary);
 }
 
