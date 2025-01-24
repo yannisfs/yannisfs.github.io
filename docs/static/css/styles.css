@@ -1,7 +1,8 @@
 :root {
     --primary: #000000;
     --secondary: #757575;
-    --netarch-sig: #18243b;
+    --netarch-sig-primary: #18243b;
+    --netarch-sig-secondary: rgba(24, 36, 59, 0.7);
 }
 
 * {
@@ -54,8 +55,17 @@ g {
     padding: 2rem;
     opacity: 0; 
     transition: opacity 0.5s ease-in-out;
-    background: rgba(24, 36, 59, 0.7); /* just --netarch-sig with lower opacity */
-    backface-visibility: 0.5;
+
+}
+
+.wd-slogan{
+    width: 100vw;
+    background: var(--netarch-sig-secondary);
+}
+
+.gd-slogan{
+    width: 100vw;
+    background: rgba(24, 36, 59, 0.5); /* just --netarch-sig-secondary with lower opacity */
 }
 
 .quick-menu {
