@@ -78,22 +78,21 @@ g {
 }
 
 .slogan{
+    text-align: start;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     width: 20vw;
     min-height: 15vh;
     /* background: var(--netarch-sig-secondary); */
 }
 
 .slogan h1{
-    text-align: start;
     color: var(--primary);
 }
 
 .slogan p{
-    text-align: start;
     color: var(--secondary)
 }
 
