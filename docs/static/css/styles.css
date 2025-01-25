@@ -124,11 +124,11 @@ g {
 
     .slogan-card{
         flex-direction: column;
+        justify-content: space-evenly;
         min-width: 90vw;
     }
 
     .slogan{
-        justify-content: start;
         width: 90vw;
     }
 
