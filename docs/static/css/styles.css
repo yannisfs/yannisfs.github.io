@@ -66,14 +66,14 @@ g {
     display: flex;
     flex-direction: row;
     width: 60vw;
-    height: 45vh;
+    min-height: 45vh;
     justify-content: space-evenly;
     align-items: center;
 }
 
 .slogan-img{
     object-fit: cover;
-    height: 45vh;
+    min-height: 45vh;
     max-width: 40vw;
 }
 
@@ -124,5 +124,12 @@ g {
 
     .slogan-card{
         flex-direction: column;
+        width: 100vw;
+    }
+
+    .slogan-img{
+        object-fit: cover;
+        min-height: 45vh;
+        width: 90vw;
     }
 }
