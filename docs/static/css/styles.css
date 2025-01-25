@@ -123,7 +123,7 @@ g {
 
     .slogan-card{
         flex-direction: column;
-        width: 90vw;
+        min-width: 90vw;
     }
 
     .slogan{
@@ -132,7 +132,7 @@ g {
 
     .slogan-img{
         object-fit: cover;
-        min-height: 45vh;
-        width: 90vw;
+        min-height: 10vh;
+        min-width: 90vw;
     }
 }
