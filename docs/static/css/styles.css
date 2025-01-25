@@ -78,7 +78,6 @@ g {
 }
 
 .slogan{
-    text-align: start;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,10 +88,12 @@ g {
 }
 
 .slogan h1{
+    text-align: start;
     color: var(--primary);
 }
 
 .slogan p{
+    text-align: start;
     color: var(--secondary)
 }
 
