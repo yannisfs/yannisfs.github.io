@@ -29,6 +29,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-bottom: black 2px;
 }
 
 .entrance-graphic {
@@ -64,7 +65,7 @@ g {
     align-items: center;
     width: 100vw;
     min-height: 50vh;
-    background: var(--netarch-sig-secondary);
+    /* background: var(--netarch-sig-secondary); */
 }
 
 .slogan h1{
