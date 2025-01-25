@@ -2,7 +2,7 @@
     --primary: #000000;
     --secondary: #757575;
     --netarch-sig-primary: #18243b;
-    --netarch-sig-secondary: rgba(24, 36, 59, 0.2);
+    --netarch-sig-secondary: rgba(24, 36, 59, 0.1);
 }
 
 * {
@@ -31,6 +31,7 @@ body {
     justify-content: center;
     align-items: center;
     border-bottom: solid var(--secondary) 1.5px;
+    scroll-snap-type: x proximity;
 }
 
 .entrance-graphic {
@@ -56,6 +57,7 @@ g {
     min-height: 20vh;
     width: 100vw;
     opacity: 0; 
+    background-color: var(--netarch-sig-secondary);
     transition: opacity 0.5s ease-in-out;
 }
 
