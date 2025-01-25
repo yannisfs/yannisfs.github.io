@@ -64,26 +64,31 @@ g {
 .slogan-card{
     display: flex;
     flex-direction: row;
+    width: 60vw;
     justify-content: space-evenly;
     align-items: center;
 }
 
+.slogan-img{
+    object-fit: cover;
+    max-width: 40vw;
+}
 .slogan{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    min-height: 50vh;
+    width: 20vw;
+    min-height: 30vh;
     /* background: var(--netarch-sig-secondary); */
 }
 
 .slogan h1{
-    width: 50vw;
+    width: 20vw;
 }
 
 .slogan p{
-    width: 50vw;
+    width: 20vw;
 }
 
 .hidden{
