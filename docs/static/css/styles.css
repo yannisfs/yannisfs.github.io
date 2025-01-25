@@ -30,7 +30,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: solid var(--secondary) 1.5px;
     scroll-snap-type: x proximity;
 }
 
@@ -124,13 +123,13 @@ g {
 
     .slogan-card{
         flex-direction: column;
-        width: 100vw;
+        width: 90vw;
     }
 
     .slogan{
         width: 90vw;
     }
-    
+
     .slogan-img{
         object-fit: cover;
         min-height: 45vh;
