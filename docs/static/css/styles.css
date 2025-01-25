@@ -87,11 +87,11 @@ g {
 }
 
 .slogan h1{
-    width: 20vw;
+    color: var(--primary);
 }
 
 .slogan p{
-    width: 20vw;
+    color: var(--secondary)
 }
 
 .hidden{
