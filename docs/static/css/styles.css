@@ -127,6 +127,10 @@ g {
         width: 100vw;
     }
 
+    .slogan{
+        width: 90vw;
+    }
+    
     .slogan-img{
         object-fit: cover;
         min-height: 45vh;
