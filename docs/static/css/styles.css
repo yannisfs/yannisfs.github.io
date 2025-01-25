@@ -61,7 +61,8 @@ g {
 }
 
 .slogan-card{
-    margin-bottom: 5vh;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
     display: flex;
     flex-direction: row;
     width: 60vw;
