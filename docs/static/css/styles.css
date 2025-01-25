@@ -84,7 +84,7 @@ g {
     justify-content: center;
     align-items: center;
     width: 20vw;
-    min-height: 30vh;
+    min-height: 15vh;
     /* background: var(--netarch-sig-secondary); */
 }
 
