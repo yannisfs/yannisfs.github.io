@@ -30,7 +30,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: solid var(--secondary) 8px;
+    border-bottom: solid var(--secondary) 3px;
 }
 
 .entrance-graphic {
