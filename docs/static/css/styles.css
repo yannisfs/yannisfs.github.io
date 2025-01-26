@@ -49,8 +49,8 @@ g {
 }
 
 .main-content {
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
