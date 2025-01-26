@@ -78,6 +78,8 @@ g {
 }
 
 .slogan-img{
+    border-radius: 2rem;
+    overflow: hidden;
     object-fit: cover;
     min-height: 45vh;
     max-width: 40vw;
