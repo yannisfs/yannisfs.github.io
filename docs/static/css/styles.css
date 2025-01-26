@@ -83,6 +83,7 @@ g {
     object-fit: cover;
     min-height: 45vh;
     max-width: 40vw;
+    margin: 2vw;
 }
 
 .slogan{
