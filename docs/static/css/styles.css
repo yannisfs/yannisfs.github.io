@@ -30,7 +30,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    scroll-snap-type: x proximity;
+    scroll-snap-type: x mandatory;
 }
 
 .entrance-graphic {
@@ -49,6 +49,9 @@ g {
 }
 
 .main-content {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
