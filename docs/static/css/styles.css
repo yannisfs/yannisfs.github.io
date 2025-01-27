@@ -3,7 +3,9 @@
     --secondary: #757575;
     --text-dark: #2e3138;
     --netarch-sig-primary: #18243b;
-    --netarch-sig-secondary: rgba(24, 36, 59, 0.05);
+    --netarch-sig-primary-light: rgba(24, 36, 59, 0.05);
+    --netarch-sig-secondary: #757A7E;
+    --netarch-sig-tertiary: #A5A4A2; 
     --button-secondary: #d5d7dd;
 }
 
@@ -106,7 +108,6 @@ g {
     align-items: center;
     max-width: 18vw;
     min-height: 40vh;
-    /* background: var(--netarch-sig-secondary); */
 }
 
 .slogan-title{
@@ -120,11 +121,12 @@ g {
 }
 
 .slogan-cta-button{
-    border-radius: 1rem;
+    border-radius: 2rem;
     border-color: transparent;
-    background-color: var(--button-secondary);
+    background-color: var(--netarch-sig-secondary);
     color: var(--text-dark);
-    margin-top: 1vh;
+    margin-top: 3vh;
+    padding: 0.3vh;
 }
 
 .hidden-l{
