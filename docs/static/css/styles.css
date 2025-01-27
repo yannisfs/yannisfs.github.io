@@ -123,7 +123,7 @@ g {
 .slogan-cta-button{
     border-radius: 2rem;
     border-color: transparent;
-    background-color: var(--netarch-sig-secondary);
+    background-color: var(--netarch-sig-tertiary);
     color: var(--text-dark);
     margin-top: 3vh;
     padding: 0.3vh;
