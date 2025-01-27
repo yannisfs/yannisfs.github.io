@@ -58,9 +58,17 @@ g {
     align-items: center;
     min-height: 20vh;
     width: 100vw;
-    opacity: 0; 
     background-color: var(--netarch-sig-primary);
-    transition: opacity 0.5s ease-in-out;
+}
+
+.work-section{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+    width: 100vw;
 }
 
 .slogan-card{
@@ -127,15 +135,6 @@ g {
     opacity: 1;
     transform: translateX(0);
     filter: blur(0);
-}
-
-
-.quick-menu {
-    width: 100%;
-    padding: 1rem 2rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 }
 
 @media (max-width: 840px) {

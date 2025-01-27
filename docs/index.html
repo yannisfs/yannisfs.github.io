@@ -68,90 +68,32 @@
             </svg>
         </div>
         <div class="main-content">
-
-            <div class="slogan-card hidden-l">
-                <img class="slogan-img" src="static/images/waves_graphic_design.jpg" alt="Web design UI UX graphic">
-                <div class="slogan">
-                    <h1 class="wd-slogan-title">Web design</h1>
-                    <p class="wd-slogan-text">
-                        Websites that fulfill through a visually appealing UI design and a unique User Experience.
-                    </p>
+            <div class="work-section">
+                <div class="slogan-card-wrapper">
+                    <div class="slogan-card hidden-l">
+                        <img class="slogan-img" src="static/images/waves_graphic_design.jpg" alt="Web design UI UX graphic">
+                        <div class="slogan">
+                            <h1 class="wd-slogan-title">Web design</h1>
+                            <p class="wd-slogan-text">
+                                Websites that fulfill through a visually appealing UI design and a unique User Experience.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slogan-card hidden-l">
+                        <img class="slogan-img" src="static/images/waves_graphic_design.jpg" alt="Design thinking graphic">
+                        <div class="slogan">
+                            <h1 class="gd-slogan-title">Graphic design</h1>
+                            <p class="gd-slogan-text">
+                                Custom vector graphics for every usecase made with professional design thinking.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="slogan-card hidden-l">
-                <img class="slogan-img" src="static/images/bg_gradient_v2.png" alt="Design thinking graphic">
-                <div class="slogan">
-                    <h1 class="gd-slogan-title">Graphic design</h1>
-                    <p class="gd-slogan-text">
-                        Custom vector graphics for every usecase made with professional design thinking.
-                    </p>
-                </div>
+                
             </div>
         </div>
     </body>
-    <script>
-        const tl = gsap.timeline({defaults: { ease: 'power4.out, duration: .7'}});
-
-        gsap.set('g', {
-            autoAlpha : 1,
-            transformOrigin : "50% 50%",
-            scale : 5
-        });
-
-        gsap.set(['#Title', '.swipe-indicator'], {
-            opacity : 0
-        });
-
-        gsap.set('.main-content', {
-            autoAlpha : 1
-        });
-
-        tl
-            .add('logo_animate')
-            .to('#Logo-1', {
-                x : -580,
-                y : 580,
-                duration : 0.5
-            }, 'logo_animate')
-            .to('#Logo-3', {
-                x : 580,
-                y : -580,
-                duration : 0.5
-            }, 'logo_animate');
-
-        tl
-            .add('logo_title_animate')
-            .to('#Logo-1', {
-                x : -3280,
-                y : 580,
-                duration : 0.8,
-                immediateRender: false
-            }, 'logo_title_animate')
-            .to('#Logo-2', {
-                x : -2700,
-                duration : 0.8,
-                immediateRender: false
-            }, 'logo_title_animate')
-            .to('#Logo-3',  {
-                x : -2120,
-                y : -580,
-                duration : 0.8,
-                immediateRender: false
-            }, 'logo_title_animate')
-            .fromTo('#Title', {
-                x : 700
-            }, {
-                x : 1300,
-                opacity : 1,
-                delay: 0.2,
-                duration : 0.6,
-                immediateRender: false
-            }, 'logo_title_animate')
-            .to('.swipe-indicator', {
-                opacity: 1,
-                delay: 0.3,
-                duration: 0.5
-            }, 'logo_title_animate');
-    </script>
+    
+    <script src="static/js/entrance_animation.js"></script>
     <script defer src="static/js/main.js"></script>
 </html>
