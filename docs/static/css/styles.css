@@ -175,8 +175,8 @@ g {
 
     .slogan{
         margin: 2vw;
-        margin-top: 0;
-        min-height: 20vh;
+        margin-top: 2vh;
+        min-height: 10vh;
         max-width: 91vw;
     }
 }
