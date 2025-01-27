@@ -92,7 +92,7 @@ g {
     text-align: start;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: start;
     max-width: 18vw;
     min-height: 40vh;
