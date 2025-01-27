@@ -97,14 +97,14 @@ g {
 }
 
 .slogan{
-    margin: 1vw;
+    margin: 2vw;
     margin-left: 0;
     text-align: start;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    max-width: 19vw;
+    max-width: 18vw;
     min-height: 40vh;
     /* background: var(--netarch-sig-secondary); */
 }
@@ -171,9 +171,9 @@ g {
     }
 
     .slogan{
-        margin: 1vw;
+        margin: 2vw;
         margin-top: 0;
         min-height: 20vh;
-        max-width: 93vw;
+        max-width: 91vw;
     }
 }
