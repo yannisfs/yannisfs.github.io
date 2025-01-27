@@ -91,19 +91,19 @@ g {
     overflow: hidden;
     object-fit: cover;
     min-height: 40vh;
-    max-width: 36vw;
-    margin: 2vw;
+    max-width: 38vw;
+    margin: 1vw;
 }
 
 .slogan{
-    margin: 2vw;
+    margin: 1vw;
     margin-left: 0;
     text-align: start;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    max-width: 18vw;
+    max-width: 19vw;
     min-height: 40vh;
     /* background: var(--netarch-sig-secondary); */
 }
@@ -151,16 +151,16 @@ g {
 
     .slogan-img{
         object-fit: cover;
-        margin: 2vw;
+        margin: 1vw;
         min-height: 20vh;
-        max-width: 91vw;
-        width: 91vw;
+        max-width: 93vw;
+        width: 93vw;
     }
 
     .slogan{
-        margin: 2vw;
+        margin: 1vw;
         margin-top: 0;
         min-height: 20vh;
-        max-width: 91vw;
+        max-width: 93vw;
     }
 }
