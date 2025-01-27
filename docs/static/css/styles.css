@@ -103,17 +103,19 @@ g {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     max-width: 18vw;
     min-height: 40vh;
     /* background: var(--netarch-sig-secondary); */
 }
 
 .slogan-title{
+    width: 100%;
     color: var(--primary);
 }
 
 .slogan-text{
+    width: 100%;
     color: var(--secondary)
 }
 
