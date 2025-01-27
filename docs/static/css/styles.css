@@ -1,8 +1,10 @@
 :root {
     --primary: #000000;
     --secondary: #757575;
+    --text-dark: #2e3138;
     --netarch-sig-primary: #18243b;
     --netarch-sig-secondary: rgba(24, 36, 59, 0.05);
+    --button-secondary: #d5d7dd;
 }
 
 * {
@@ -118,7 +120,8 @@ g {
 .slogan-cta-button{
     border-radius: 1rem;
     border-color: transparent;
-    background-color: var(--secondary);
+    background-color: var(--button-secondary);
+    color: var(--text-dark);
     margin-top: 1vh;
 }
 
