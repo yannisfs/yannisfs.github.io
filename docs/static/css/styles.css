@@ -145,6 +145,7 @@ g {
         object-fit: cover;
         margin: 2vw;
         min-height: 20vh;
+        max-width: 91vw;
         width: 91vw;
     }
 
