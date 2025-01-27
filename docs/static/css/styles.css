@@ -121,7 +121,7 @@ g {
 }
 
 .slogan-cta-button{
-    border-radius: 2rem;
+    border-radius: 0.6rem;
     border-color: transparent;
     background-color: var(--button-secondary);
     margin-top: 3vh;
