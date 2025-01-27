@@ -108,12 +108,20 @@ g {
     color: var(--secondary)
 }
 
-.hidden{
+.hidden-l{
     opacity: 0;
     transform: translateX(-100%);
     filter: blur(5px);
     transition: all 2s;
 }
+
+.hidden-r{
+    opacity: 0;
+    transform: translateX(100%);
+    filter: blur(5px);
+    transition: all 2s;
+}
+
 
 .show{
     opacity: 1;
