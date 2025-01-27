@@ -143,15 +143,15 @@ g {
 
     .slogan-img{
         object-fit: cover;
-        margin: 2vh;
+        margin: 2vw;
         min-height: 20vh;
-        width: 93vw;
+        width: 91vw;
     }
 
     .slogan{
-        margin: 2vh;
+        margin: 2vw;
         margin-top: 0;
         min-height: 20vh;
-        max-width: 90vw;
+        max-width: 91vw;
     }
 }
