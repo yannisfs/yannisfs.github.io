@@ -77,12 +77,11 @@ g {
     display: flex;
     flex-direction: row;
     width: 60vw;
-    min-height: 45vh;
+    min-height: 46vh;
     justify-content: space-evenly;
     align-items: center;
     border-radius: 2rem;
     overflow: hidden;
-    background-color: #B3CFFF;
     background-color: white;
 }
 
@@ -108,12 +107,19 @@ g {
     /* background: var(--netarch-sig-secondary); */
 }
 
-.slogan h1{
+.slogan-title{
     color: var(--primary);
 }
 
-.slogan p{
+.slogan-text{
     color: var(--secondary)
+}
+
+.slogan-cta-button{
+    border-radius: 2rem;
+    border-color: transparent;
+    background-color: var(--secondary);
+    margin-top: 1vh;
 }
 
 .hidden-l{
@@ -150,7 +156,7 @@ g {
         flex-direction: column;
         justify-content: space-evenly;
         width: 95vw;
-        min-height: 46vh;
+        min-height: 41vh;
     }
 
     .slogan-img{
