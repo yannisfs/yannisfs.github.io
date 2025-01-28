@@ -7,6 +7,8 @@
     --netarch-sig-secondary: #757A7E;
     --netarch-sig-tertiary: #A5A4A2; 
     --button-secondary: #d5d7dd;
+
+    --global-border-radius: 2rem;
 }
 
 * {
@@ -53,8 +55,8 @@ g {
 }
 
 .main-content {
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 2rem;
+    border-top-left-radius: var(--global-border-radius);
+    border-top-right-radius: var(--global-border-radius);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -68,11 +70,20 @@ g {
 .work-section{
     overflow: hidden;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     min-height: 20vh;
     width: 100vw;
+}
+
+.slogan-card-wrapper{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
 }
 
 .slogan-card{
@@ -84,7 +95,7 @@ g {
     min-height: 46vh;
     justify-content: space-evenly;
     align-items: center;
-    border-radius: 2rem;
+    border-radius: var(--global-border-radius);
     overflow: hidden;
     background-color: white;
 }
@@ -121,11 +132,25 @@ g {
 }
 
 .slogan-cta-button{
-    border-radius: 2rem;
+    border-radius: var(--global-border-radius);
     border-color: transparent;
     background-color: var(--button-secondary);
     margin-top: 3vh;
     padding: 0.4vh;
+}
+
+.tech-stack-card{
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    display: flex;
+    flex-direction: row;
+    width: 30vw;
+    min-height: 46vh;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: var(--global-border-radius);
+    overflow: hidden;
+    background-color: white;
 }
 
 .hidden-l{
@@ -147,10 +172,6 @@ g {
     opacity: 1;
     transform: translateX(0);
     filter: blur(0);
-}
-
-*{
-    border-radius: 0;
 }
 
 @media (max-width: 840px) {
