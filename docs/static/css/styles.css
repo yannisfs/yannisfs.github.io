@@ -216,6 +216,7 @@ g {
     }
 
     .work-section{
+        margin-top: 0.8vh;;
         flex-direction: column;
     }
 
@@ -223,6 +224,7 @@ g {
         flex-direction: column;
         justify-content: space-evenly;
         width: 95vw;
+        height: auto;
         min-height: 45vh;
     }
 
