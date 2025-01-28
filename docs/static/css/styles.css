@@ -85,14 +85,7 @@ g {
     width: 100vw;
 }
 
-.slogan-card-wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 20vh;
 
-}
 
 .slogan-card{
     margin-top: 2.5vh;
