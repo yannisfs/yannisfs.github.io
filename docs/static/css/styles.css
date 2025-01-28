@@ -8,7 +8,7 @@
     --netarch-sig-tertiary: #A5A4A2; 
     --button-secondary: #d5d7dd;
 
-    --global-border-radius: 2rem;
+    --global-border-radius: 1.5rem;
 }
 
 * {
@@ -77,9 +77,10 @@ g {
 }
 
 .work-section{
+    gap: 2vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     min-height: 20vh;
     width: 100vw;
@@ -109,7 +110,7 @@ g {
 }
 
 .slogan-img{
-    border-radius: 2rem;
+    border-radius: var(--global-border-radius);
     overflow: hidden;
     object-fit: cover;
     min-height: 40vh;
@@ -152,9 +153,9 @@ g {
     margin-bottom: 2.5vh;
     display: flex;
     flex-direction: column;
-    width: 30vw;
+    width: 10vw;
     min-height: 97vh;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     border-radius: var(--global-border-radius);
     overflow: hidden;
