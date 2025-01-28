@@ -191,6 +191,7 @@ g {
 
     .work-section{
         flex-direction: column;
+        justify-content: center;
     }
 
     .slogan-card{
