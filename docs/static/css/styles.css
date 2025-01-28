@@ -162,6 +162,13 @@ g {
     margin-top: 3vh;
 }
 
+.tech-stack-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .tech-stack-item{
     margin: 1vh;
     color: var(--secondary);
@@ -174,6 +181,11 @@ g {
     transition: all 0.3s;
 }
 
+.tech-stack-category{
+    width: 90%;
+    text-align: left;
+}
+
 .tech-stack-item:hover{
     color: var(--netarch-sig-primary);
     scale: 1.2;
@@ -184,6 +196,20 @@ g {
     margin-right: 0.3rem;
     height: 1rem;
     width: auto;
+}
+
+.tech-stack-cta-button{
+    border-radius: 0.6rem;
+    border-color: transparent;
+    color: black;
+    background-color: var(--button-secondary);
+    margin-top: 1.5vh;
+    padding: 0.4vh;
+    transition: all 0.2s;
+}
+
+.tech-stack-cta-button:hover{
+    scale: 1.1;
 }
 
 .hidden-l{
@@ -246,11 +272,11 @@ g {
         max-width: 91vw;
     }
 
-    .slogan-cta-button{
+    .slogan-cta-button, .tech-stack-cta-button{
         scale: 1.2;
     }
 
-    .slogan-cta-button:hover{
+    .slogan-cta-button:hover, .tech-stack-cta-button:hover{
         scale: 1.3;
     }
 
