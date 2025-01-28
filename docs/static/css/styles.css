@@ -220,6 +220,7 @@ g {
     .work-section{
         margin-top: 0.8vh;
         flex-direction: column;
+        align-items: center;
     }
 
     .slogan-card{
