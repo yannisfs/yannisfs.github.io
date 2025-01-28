@@ -151,8 +151,9 @@ g {
     margin-top: 2.5vh;
     margin-bottom: 2.5vh;
     display: flex;
-    flex-direction: row;
-    min-height: 90%;
+    flex-direction: column;
+    width: 30vw;
+    min-height: 97vh;
     justify-content: space-evenly;
     align-items: center;
     border-radius: var(--global-border-radius);
@@ -161,20 +162,49 @@ g {
 }
 
 .tech-stack-title{
-    margin: 2vw;
+    margin: 2vh;
 }
+
+.tech-stack-item{
+    margin: 1vh;
+    color: var(--secondary);
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    scale: 1;
+    transition: all 0.3s;
+}
+
+.tech-stack-item:hover{
+    color: var(--netarch-sig-primary);
+    scale: 1.2;
+    transition: all 0.3s;
+}
+
+.tech-stack-item img{
+    width: 1vw;
+    height: auto;
+}
+
 .hidden-l{
     opacity: 0;
     transform: translateX(-100%);
     filter: blur(5px);
-    transition: all 2s;
+    transition: all 1.5s;
 }
 
 .hidden-r{
     opacity: 0;
     transform: translateX(+100%);
     filter: blur(5px);
-    transition: all 2s;
+    transition: all 1.5s;
+}
+
+.hidden-fade{
+    opacity: 0;
+    transition: all 1.5s;
 }
 
 
@@ -214,5 +244,10 @@ g {
         margin-top: 2vh;
         min-height: 10vh;
         max-width: 91vw;
+    }
+
+    .tech-stack-card{
+        width: 95vw;
+        min-height: 20vh;
     }
 }
