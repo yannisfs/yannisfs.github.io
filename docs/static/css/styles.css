@@ -223,13 +223,13 @@ g {
         flex-direction: column;
         justify-content: space-evenly;
         width: 95vw;
-        min-height: 41vh;
+        min-height: 45vh;
     }
 
     .slogan-img{
         object-fit: cover;
         margin: 1vw;
-        min-height: 20vh;
+        min-height: 30vh;
         max-width: 93vw;
         width: 93vw;
     }
