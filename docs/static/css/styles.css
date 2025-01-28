@@ -179,6 +179,7 @@ g {
 }
 
 .tech-stack-item img{
+    margin-right: 0.3vw;
     width: 1rem;
     height: auto;
 }
