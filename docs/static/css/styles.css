@@ -77,7 +77,6 @@ g {
 }
 
 .work-section{
-    overflow: hidden;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -87,7 +86,6 @@ g {
 }
 
 .slogan-card-wrapper{
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
