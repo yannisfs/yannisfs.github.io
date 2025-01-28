@@ -203,7 +203,7 @@ g {
     border-color: transparent;
     color: black;
     background-color: var(--button-secondary);
-    margin-top: 1.5vh;
+    margin: 1.5vh;
     padding: 0.4vh;
     transition: all 0.2s;
 }
