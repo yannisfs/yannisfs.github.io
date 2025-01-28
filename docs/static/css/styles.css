@@ -214,6 +214,11 @@ g {
         height: 70vh;
     }
 
+    .work-section{
+        display: flex;
+        flex-direction: column;
+    }
+
     .slogan-card{
         flex-direction: column;
         justify-content: space-evenly;
