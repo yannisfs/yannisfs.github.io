@@ -71,7 +71,7 @@ g {
     overflow: hidden;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     min-height: 20vh;
     width: 100vw;
@@ -84,6 +84,7 @@ g {
     justify-content: center;
     align-items: center;
     min-height: 20vh;
+
 }
 
 .slogan-card{
@@ -144,7 +145,6 @@ g {
     margin-bottom: 2.5vh;
     display: flex;
     flex-direction: row;
-    width: 30vw;
     min-height: 46vh;
     justify-content: space-evenly;
     align-items: center;
