@@ -179,7 +179,7 @@ g {
 }
 
 .tech-stack-item img{
-    width: 1vw;
+    width: 1rem;
     height: auto;
 }
 
@@ -236,7 +236,7 @@ g {
     .slogan{
         margin: 2vw;
         margin-top: 2vh;
-        min-height: 10vh;
+        min-height: 15vh;
         max-width: 91vw;
     }
 
