@@ -161,10 +161,8 @@ g {
 }
 
 .tech-stack-title{
-    font-weight: light;
     margin: 2vw;
 }
-
 .hidden-l{
     opacity: 0;
     transform: translateX(-100%);
