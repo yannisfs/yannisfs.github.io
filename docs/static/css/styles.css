@@ -152,8 +152,8 @@ g {
     margin-bottom: 2.5vh;
     display: flex;
     flex-direction: column;
-    width: 10vw;
-    min-height: 97vh;
+    width: 60vw;
+    min-height: 20vh;
     justify-content: center;
     align-items: center;
     border-radius: var(--global-border-radius);
