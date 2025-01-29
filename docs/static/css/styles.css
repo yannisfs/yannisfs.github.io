@@ -222,7 +222,7 @@ g {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: var(--berlin-gray);
+    background-color: white;
 }
 
 .tech-stack-heading{
