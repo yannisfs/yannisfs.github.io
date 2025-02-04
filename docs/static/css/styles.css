@@ -41,14 +41,14 @@ body {
     justify-content: start;
     align-items: center;
     background-color: var(--berlin-gray);
-    width: 100vw;
+    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 
 .entrance-section {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,7 +58,7 @@ body {
 
 .entrance-graphic {
     height: 90vh;
-    width: 20vw;
+    width: 20%;
     overflow: visible;
 }
 
@@ -80,7 +80,7 @@ g {
     justify-content: center;
     align-items: center;
     min-height: 20vh;
-    width: 100vw;
+    width: 100%;
     background-color: var(--netarch-sig-primary);
 }
 
@@ -91,14 +91,14 @@ g {
     justify-content: center;
     align-items: stretch;
     min-height: 46vh;
-    width: 100vw;
+    width: 100%;
 }
 
 .slogan-card{
-    margin: 0.5vw;
+    margin: 0.5%;
     display: flex;
     flex-direction: row;
-    width: 49vw;
+    width: 49%;
     min-height: 45vh;
     justify-content: space-evenly;
     align-items: center;
@@ -111,20 +111,20 @@ g {
     border-radius: var(--global-border-radius);
     overflow: hidden;
     object-fit: cover;
-    min-height: 43vh;
-    min-width: 22vw;
-    margin: 1vw;
+    height: 95%;
+    width: 60%;
+    margin: 1%;
 }
 
 .slogan{
-    margin: 2vw;
+    margin: 2%;
     margin-left: 0;
     text-align: start;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 18vw;
+    max-width: 35%;
     min-height: 40vh;
 }
 
@@ -143,14 +143,16 @@ g {
     border-color: transparent;
     color: black;
     background-color: var(--button-secondary);
-    margin-top: 3vh;
-    padding: 0.4vh;
+    margin-top: 8%;
+    padding: 1%;
     transition: all 0.2s;
 }
 
 .slogan-cta-button:hover{
     scale: 1.1;
 }
+
+/* scroller styles start */ 
 
 .tech-stack-item{
     margin: 1vh;
@@ -175,14 +177,12 @@ g {
     height: 1rem;
     width: auto;
 }
-
-
-/* scroller styles start */  
+ 
 
 .scroller{
-    margin: 2vh;
-    padding: 1vh;
-    width: 100vw;
+    margin-top: 5%;
+    padding: 1%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -191,11 +191,11 @@ g {
 }
 
 .scroller-header{
-    margin-bottom: 0.5vh;
+    margin-bottom: 2%;
 }
 
 .scroller-inner{
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -296,7 +296,7 @@ g {
     }
 
     .work-section{
-        margin-top: 0.8vh;
+        margin-top: 1.5%;
         flex-direction: column;
         align-items: center;
     }
@@ -304,24 +304,23 @@ g {
     .slogan-card{
         flex-direction: column;
         justify-content: space-evenly;
-        width: 95vw;
+        width: 95%;
         height: auto;
         min-height: 45vh;
     }
 
     .slogan-img{
         object-fit: cover;
-        margin: 1vw;
+        margin: 1%;
         min-height: 30vh;
-        max-width: 93vw;
-        width: 93vw;
+        width: 98%;
     }
 
     .slogan{
-        margin: 2vw;
+        margin: 2%;
         margin-top: 2vh;
         min-height: 15vh;
-        max-width: 91vw;
+        max-width: 96%;
     }
 
     .slogan-cta-button, .tech-stack-cta-button{
@@ -330,11 +329,6 @@ g {
 
     .slogan-cta-button:hover, .tech-stack-cta-button:hover{
         scale: 1.3;
-    }
-
-    .tech-stack-card{
-        width: 95vw;
-        min-height: 20vh;
     }
 
     .footbar{
