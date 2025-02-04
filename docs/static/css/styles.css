@@ -90,12 +90,13 @@ g {
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
+    gap: 0.5%;
     min-height: 46vh;
     width: 100%;
 }
 
 .slogan-card{
-    margin: 0.5%;
+    margin-top: 0.5%;
     display: flex;
     flex-direction: row;
     width: 49%;
@@ -147,7 +148,7 @@ g {
     padding: 1%;
     transition: all 0.2s;
 }
-
+y
 .slogan-cta-button:hover{
     scale: 1.1;
 }
@@ -155,7 +156,7 @@ g {
 /* scroller styles start */ 
 
 .tech-stack-item{
-    margin: 1vh;
+    margin: 1%;
     color: var(--secondary);
     text-decoration: none;
     display: flex;
@@ -180,7 +181,7 @@ g {
  
 
 .scroller{
-    margin-top: 5%;
+    margin-top: 8%;
     padding: 1%;
     width: 100%;
     display: flex;
