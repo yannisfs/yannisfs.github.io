@@ -248,8 +248,6 @@ y
     }
 }
 
-
-
 /* scroller styles end */  
 
 .footbar{
@@ -294,8 +292,8 @@ y
     filter: blur(0);
 }
 
-@media (max-width: 840px) {
-    .entrance-graphic {
+@media (max-width: 840px){
+    .entrance-graphic{
         height: 70vh;
     }
 
