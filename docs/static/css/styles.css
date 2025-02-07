@@ -10,7 +10,7 @@
 
     --berlin-gray: #ebedef;
 
-    --global-border-radius: 1rem;
+    --global-border-radius: 0;
 
     --clr-neutral-100: hsl(0, 0%, 100%);
     --clr-primary-100: hsl(205, 15%, 58%);
