@@ -145,8 +145,8 @@ g {
 }
 
 @media (max-width: 840px){
-    .entrance-graphic{
-        height: 70vh;
+    .intro-segment{
+        flex-direction: column;
     }
 
     .footbar{
