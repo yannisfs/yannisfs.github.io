@@ -81,7 +81,7 @@ g {
     align-items: center;
     min-height: 20vh;
     width: 100%;
-    background-color: var(--netarch-sig-primary);
+    background-color: var(--netarch-sig-tertiary);
 }
 
 
