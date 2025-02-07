@@ -106,6 +106,8 @@ g {
 }
 
 .intro-content{
+    height: 100%;
+    max-width: 30%;
     margin: 2%;
     padding-top: 5%;
     display: flex;
