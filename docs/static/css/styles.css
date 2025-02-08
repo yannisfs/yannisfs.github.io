@@ -148,7 +148,7 @@ g{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--netarch-sig-tertiary);
+    background-color: white;
 }
 
 .cta-title{
