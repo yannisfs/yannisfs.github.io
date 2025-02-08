@@ -142,7 +142,7 @@ g{
 }
 
 .call-to-action-segment{
-    margin-top: 2%;
+    margin-top: 8%;
     padding: 2%;
     width: 100%;
     display: flex;
@@ -267,6 +267,10 @@ g{
     .intro-content{
         max-width: 100%;
         max-height: 30%;
+    }
+
+    .call-to-action-segment{
+        margin-top: 15%;
     }
 
     .cta-title{
