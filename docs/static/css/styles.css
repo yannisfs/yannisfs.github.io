@@ -90,6 +90,15 @@ button:hover{
     scale: 0.2;
 }
 
+.swipe-indicator-link{
+    transition: all 0.3s linear;
+}
+
+.swipe-indicator-link:hover{
+    transform-origin: 50% 50%;
+    scale: 1.2;
+}
+
 g{
     overflow: hidden;
     visibility: hidden;
