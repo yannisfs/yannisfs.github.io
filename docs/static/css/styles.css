@@ -176,7 +176,7 @@ g{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: stretch;
+    align-items: start;
     height: 70%;
     width: 100%;
 }
