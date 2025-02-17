@@ -1,3 +1,5 @@
+/* base styles start */
+
 :root {
     --primary: #000000;
     --secondary: #757575;
@@ -124,6 +126,52 @@ button:hover{
     transition: all 0.2s;
     font-weight: lighter;
 }
+
+.footbar-section{
+    margin: 1vh;
+}
+
+.footbar-item{
+    margin: 5%;
+}
+
+.footbar-link{
+    color: white;
+}
+
+.footbar-link:hover{
+    scale: 1.2;
+}
+
+.hidden-l{
+    opacity: 0;
+    transform: translateX(-100%);
+    filter: blur(5px);
+    transition: all 1.5s;
+}
+
+.hidden-r{
+    opacity: 0;
+    transform: translateX(+100%);
+    filter: blur(5px);
+    transition: all 1.5s;
+}
+
+.hidden-fade{
+    opacity: 0;
+    transition: all 1.5s;
+}
+
+
+.show{
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
+
+/* base styles end */
+
+/* index.html specific styles */
 
 .entrance-section {
     height: 100svh;
@@ -280,48 +328,26 @@ g{
     background-color: var(--netarch-sig-primary);
     color: white;
 }
+/* index specific styles end */
 
-.footbar-section{
-    margin: 1vh;
+/* service pages specific styles start */
+
+.hero-intro-segment{
+    position: relative;
+    height: 95svh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-.footbar-item{
-    margin: 5%;
+.hero-visual{
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
 }
 
-.footbar-link{
-    color: white;
-}
-
-.footbar-link:hover{
-    scale: 1.2;
-}
-
-.hidden-l{
-    opacity: 0;
-    transform: translateX(-100%);
-    filter: blur(5px);
-    transition: all 1.5s;
-}
-
-.hidden-r{
-    opacity: 0;
-    transform: translateX(+100%);
-    filter: blur(5px);
-    transition: all 1.5s;
-}
-
-.hidden-fade{
-    opacity: 0;
-    transition: all 1.5s;
-}
-
-
-.show{
-    opacity: 1;
-    transform: translateX(0);
-    filter: blur(0);
-}
+/* service pages specific styles end */
 
 @media (max-width: 840px){
     .intro-segment{
