@@ -211,6 +211,7 @@ g{
 
 .call-to-action-segment{
     margin-top: 8%;
+    margin-bottom: 8%;
     padding: 2%;
     width: 100%;
     display: flex;
@@ -271,7 +272,6 @@ g{
 
 .footbar{
     width: 100%;
-    margin-top: 5vh;
     padding: 1vw; 
     display: flex;
     flex-direction: row;
