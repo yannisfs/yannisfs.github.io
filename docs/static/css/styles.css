@@ -81,7 +81,7 @@ button:hover{
 
 .navbar-brand{
     height: 100%;
-    max-width: 20%;
+    width: 20%;
 }
 
 .navbar-menu{
