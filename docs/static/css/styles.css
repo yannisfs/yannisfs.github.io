@@ -338,13 +338,14 @@ g{
     width: 100%;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .hero-visual{
     filter: blur(5px);
     object-fit: cover;
-    width: 100%;
-    height: 100%;
+    width: 101%;
+    height: 101%;
 }
 
 /* service pages specific styles end */
