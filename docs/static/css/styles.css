@@ -87,8 +87,9 @@ button:hover{
 
 .navbar-logo{
     width: auto;
-    height: 50%;
+    height: 70%;
     object-fit: contain;
+    object-position: 50% 50%;
 }
 
 .navbar-menu{
