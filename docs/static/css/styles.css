@@ -100,6 +100,10 @@ button:hover{
     align-items: center;
 }
 
+.navbar-item{
+    margin: 5%;
+}
+
 .navbar-secondary{
     text-align: center;
     color: black;
