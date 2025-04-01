@@ -53,7 +53,7 @@ body {
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    background-color: var(--berlin-gray);
+    background-color: white;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -175,6 +175,7 @@ button:hover{
 .entrance-section {
     height: 100svh;
     width: 100%;
+    background-color: var(--berlin-gray);
     display: flex;
     flex-direction: column;
     justify-content: center;
