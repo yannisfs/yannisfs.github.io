@@ -63,7 +63,7 @@ button{
     border-color: transparent;
     color: white;
     background-color: black;
-    padding: 1%;
+    padding: 0.5rem;
     transition: all 0.2s;
     font-weight: bold;
 }
