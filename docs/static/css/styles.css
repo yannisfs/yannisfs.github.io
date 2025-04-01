@@ -343,9 +343,16 @@ g{
 }
 
 .hero-visual{
+    position: relative;
     object-fit: cover;
     width: 100%;
     height: 100%;
+}
+
+.hero-content{
+    position: absolute;
+    top: 50%;
+    left: 20%;
 }
 
 /* service pages specific styles end */
