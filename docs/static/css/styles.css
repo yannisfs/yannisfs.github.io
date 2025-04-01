@@ -79,6 +79,7 @@ button:hover{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 }
 
 .navbar-brand{
@@ -102,8 +103,8 @@ button:hover{
     width: 50%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: end;
+    justify-content: end;
+    align-items: center;
 }
 
 .navbar-item{
