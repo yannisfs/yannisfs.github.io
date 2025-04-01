@@ -63,7 +63,7 @@ button{
     border-color: transparent;
     color: white;
     background-color: black;
-    padding: 0.5rem;
+    padding: 0.75% 0.5rem 0.75% 0.5rem;
     transition: all 0.2s;
     font-weight: bold;
 }
@@ -121,7 +121,7 @@ button:hover{
     border-color: transparent;
     color: white;
     background-color: black;
-    padding: 0.5rem;
+    padding: 0.75% 0.5rem 0.75% 0.5rem;
     transition: all 0.2s;
     font-weight: lighter;
 }
