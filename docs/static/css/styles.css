@@ -360,6 +360,7 @@ g{
     background-clip: text;
     backdrop-filter: invert(100%);
     color: transparent;
+    background-color: transparent;
 }
 
 .hero-text{
