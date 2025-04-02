@@ -356,6 +356,16 @@ g{
     left: 20%;
 }
 
+.hero-title{
+    background-clip: text;
+    backdrop-filter: invert(100%);
+    color: transparent;
+}
+
+.hero-text{
+    color: white;
+}
+
 /* service pages specific styles end */
 
 @media (max-width: 840px){
