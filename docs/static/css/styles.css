@@ -357,10 +357,8 @@ g{
 }
 
 .hero-title{
-    background-clip: text;
-    backdrop-filter: invert(100%);
-    color: transparent;
-    background-color: transparent;
+    color: white;
+    mix-blend-mode: difference;
 }
 
 .hero-text{
