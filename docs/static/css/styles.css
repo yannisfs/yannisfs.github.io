@@ -359,6 +359,7 @@ g{
 .hero-title{
     color: white;
     mix-blend-mode: difference;
+    font-size: 3rem;
 }
 
 .hero-text{
