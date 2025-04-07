@@ -358,6 +358,10 @@ g{
 
 .hero-title{
     color: white;
+    background-clip: text;
+    -webkit-background-clip: text;
+    backdrop-filter: invert(100%);
+    -webkit-backdrop-filter: invert(100%);
     mix-blend-mode: difference;
     font-size: 3rem;
 }
