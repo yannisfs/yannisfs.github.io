@@ -358,6 +358,7 @@ g{
 
 .hero-title{
     color: white;
+    transform: translate3d(0,0,0);
     mix-blend-mode: difference;
     font-size: 4rem;
 }
