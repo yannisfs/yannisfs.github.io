@@ -416,9 +416,11 @@ body {
 }
 
 .hero-title {
+    color: white;
+    transform: translate3d(0,0,0);
+    mix-blend-mode: difference;
     font-size: 3.5rem;
     font-weight: 700;
-    color: #18243b;
     margin-bottom: 20px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
