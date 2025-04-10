@@ -128,12 +128,29 @@ button:hover{
     font-weight: lighter;
 }
 
+.footbar{
+    width: 100%;
+    padding: 1vw; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    background-color: var(--netarch-sig-primary);
+    color: white;
+}
+
+.footbar-header{
+    font-size: 1.2rem;
+}
+
+
 .footbar-section{
     margin: 1svh;
 }
 
 .footbar-item{
     margin: 5%;
+    font-size: 1rem;
 }
 
 .footbar-link{
@@ -319,17 +336,6 @@ g{
     width: 90%;
     text-align: center;
 }
-
-.footbar{
-    width: 100%;
-    padding: 1vw; 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: stretch;
-    background-color: var(--netarch-sig-primary);
-    color: white;
-}
 /* index specific styles end */
 
 /* service pages specific styles start */
@@ -413,7 +419,15 @@ g{
     }
 
     .footbar{
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
+    }
+
+    .footbar-header{
+        font-size: 1rem;
+    }
+
+    .footbar-item{
+        font-size: 0.75rem;
     }
 } 
