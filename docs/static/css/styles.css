@@ -339,39 +339,219 @@ g{
 /* index specific styles end */
 
 /* service pages specific styles start */
-/* 
-.hero-segment{
+
+/* Service Hero Section */
+.service-hero-section {
     position: relative;
-    height: 95svh;
-    width: 100%;
+    height: 60vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     overflow: hidden;
+    background-color: var(--netarch-sig-primary);
 }
 
-.hero-visual{
-    position: relative;
-    object-fit: cover;
+.service-hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.8;
 }
 
-.hero-content{
+.service-hero-content {
+    z-index: 1;
+    padding: 20px;
+}
+
+.service-hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--clr-neutral-100);
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.service-hero-text {
+    font-size: 1.3rem;
+    color: var(--netarch-sig-tertiary);
+}
+
+/* Service Content Section (Two-Column) */
+.service-content-section {
+    padding: 60px 20px;
+    background-color: var(--berlin-gray);
+    width: 100%;
+}
+
+.service-content-two-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-content-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.service-content-title {
+    font-size: 2.2rem;
+    color: var(--netarch-sig-primary);
+    margin-bottom: 20px;
+}
+
+.service-content-description {
+    font-size: 1.1rem;
+    color: var(--netarch-sig-secondary);
+    margin-bottom: 20px;
+}
+
+.service-content-list {
+    list-style: none;
+    padding: 0;
+}
+
+.service-content-list li {
+    font-size: 1rem;
+    color: var(--netarch-sig-primary);
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.service-content-list li::before {
+    content: "•";
     position: absolute;
-    top: 50%;
-    left: 20%;
+    left: 0;
+    color: var(--netarch-sig-primary);
+    font-size: 1.5rem;
 }
 
-.hero-title{
-    color: white;
-    transform: translate3d(0,0,0);
-    mix-blend-mode: difference;
-    font-size: 4rem;
+.service-content-image {
+    flex: 1;
+    padding: 20px;
 }
 
-.hero-text{
-    color: white;
-} */
+.service-content-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Testimonials Section (One-Column) */
+.service-testimonial-section {
+    padding: 60px 20px;
+    background-color: var(--clr-neutral-100);
+    text-align: center;
+    width: 100%;
+}
+
+.service-testimonial-title {
+    font-size: 2.2rem;
+    color: var(--netarch-sig-primary);
+    margin-bottom: 30px;
+}
+
+.service-testimonial-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.service-testimonial-quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--netarch-sig-secondary);
+    margin-bottom: 15px;
+}
+
+.service-testimonial-author {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--netarch-sig-primary);
+}
+
+/* CTA Section (One-Column) */
+.service-cta-section {
+    padding: 60px 20px;
+    background-color: var(--netarch-sig-primary);
+    text-align: center;
+    width: 100%;
+}
+
+.service-cta-title {
+    font-size: 2.2rem;
+    color: var(--clr-neutral-100);
+    margin-bottom: 20px;
+}
+
+.service-cta-button {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--netarch-sig-primary);
+    background-color: var(--clr-neutral-100);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.service-cta-button:hover {
+    background-color: var(--netarch-sig-tertiary);
+    color: var(--clr-neutral-100);
+    scale: 1.1;
+}
+
+/* Responsive Design for Service Pages */
+@media (max-width: 840px) {
+    .service-hero-section {
+        height: 50vh;
+    }
+
+    .service-hero-title {
+        font-size: 2.2rem;
+    }
+
+    .service-hero-text {
+        font-size: 1.1rem;
+    }
+
+    .service-content-two-column {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service-content-text,
+    .service-content-image {
+        padding: 10px;
+    }
+
+    .service-content-title {
+        font-size: 1.8rem;
+    }
+
+    .service-testimonial-title {
+        font-size: 1.8rem;
+    }
+
+    .service-cta-title {
+        font-size: 1.8rem;
+    }
+
+    .service-cta-button {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+}
 
 /* service pages specific styles end */
 
@@ -416,11 +596,9 @@ body {
 }
 
 .hero-title {
-    color: white;
-    transform: translate3d(0,0,0);
-    mix-blend-mode: difference;
     font-size: 3.5rem;
     font-weight: 700;
+    color: #18243b;
     margin-bottom: 20px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
