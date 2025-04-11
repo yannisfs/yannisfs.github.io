@@ -1,91 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Netarch</title>
-        
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Custom Branding and Website Development solutions by Netarch." />
+    <title>Netarch - Branding & Website Solutions</title>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <img src="static/images/logo.png" alt="Netarch Logo" class="navbar-logo">
+        </div>
+        <div class="navbar-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="navbar-menu">
+            <a href="index.html" class="navbar-item navbar-secondary">Home</a>
+            <a href="brandwebsite_service.html" class="navbar-item navbar-primary">Branding & Website</a>
+            <a href="appdev_service.html" class="navbar-item navbar-secondary">App Development</a>
+            <a href="aimlcv_service.html" class="navbar-item navbar-secondary">AI/ML/CV Solutions</a>
+        </div>
+    </nav>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <!-- Header Section -->
+    <section class="service-hero-section">
+        <video autoplay muted playsinline loop class="service-hero-video">
+            <source src="static/images/sky_video.mp4" type="video/mp4">
+        </video>
+        <div class="service-hero-content">
+            <h1 class="service-hero-title">Branding & Website Solutions</h1>
+            <p class="service-hero-text">Craft a unique identity and a high-performance website tailored to your business.</p>
+        </div>
+    </section>
 
-        <!-- Search Engine Tags-->
-        <meta name="google-site-verification" content="snQ83qugK9pGb-jvhta9NohbepOSY3ZaAvw58kk79xo" />
-
-        <!-- <meta name="description" content="Moderne und maßgeschneiderte IT Lösungen. Wir spezialisieren uns für sie!"> -->
-        <meta name="description" content="Unique brand identities and high-performance websites tailored to your niche">
-
-        <!-- Data for Quicklink scrapers -->
-        <!-- Open Graph Meta Tags -->
-        <meta property="og:title" content="Netarch Agency"/>
-        <meta property="og:description" content="Network Architecture & Website Solutions | branding & websites"/>
-        <meta property="og:url" content="https://netarch.co"/>
-        <meta property="og:image" content="https://netarch.co/static/images/Quicklink_Thumbnail_Netarch.png"/>
-        <meta property="og:image:height" content="630"/>
-        <meta property="og:image:width" content="1200"/>
-        <meta property="og:image" content="https://netarch.co/static/images/Quicklink_Thumbnail_Square_Netarch.png"/>
-        <meta property="og:image:height" content="512"/>
-        <meta property="og:image:width" content="512"/>
-        <meta property="og:type" content="website"/>
-
-        <!-- Twitter Card tags-->
-        <meta name="twitter:card" content="Company Logo"/>
-        <meta name="twitter:title" content="Netarch Agency"/>
-        <meta name="twitter:description" content="Network Architecture & Website Solutions | branding & websites"/>
-        <meta name="twitter:image" content="https://netarch.co/static/images/Quicklink_Thumbnail_Netarch.png" />
-
-        <!-- link to favicon-->
-        <link rel="shortcut icon" href="static/images/favicon.png" type="image/png" />
-        <!-- Link to CSS -->
-        <link rel="stylesheet" href="static/css/styles.css" />
-        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
-
-        <!-- GSAP + ScrollTrigger (CDN) -->
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
-    </head>
-    <body>
-        <div class="navbar service-navbar">
-            <a class="navbar-brand" href="index.html">
-                <img class="navbar-logo" src="static/images/netarch_icon_text.png">
-            </a>
-            <div class="navbar-menu service-navmenu">
-                <a class="navbar-secondary navbar-item">examples</a>
-                <a class="navbar-secondary navbar-item">quote</a>
-                <a class="navbar-primary navbar-item">appointment</a>
+    <!-- Main Content Section (Two-Column) -->
+    <section class="service-content-section">
+        <div class="service-content-two-column">
+            <div class="service-content-text">
+                <h2 class="service-content-title">Elevate Your Brand</h2>
+                <p class="service-content-description">
+                    At Netarch, we specialize in creating custom branding that resonates with your audience. From logo design to color schemes, we ensure your brand stands out. Our web development services deliver responsive, SEO-optimized websites that drive engagement and conversions.
+                </p>
+                <ul class="service-content-list">
+                    <li>Custom logo and brand identity design</li>
+                    <li>Responsive, user-friendly websites</li>
+                    <li>SEO and performance optimization</li>
+                </ul>
+            </div>
+            <div class="service-content-image">
+                <img src="static/images/spider_web_design.jpg" alt="Branding and Website" class="service-content-img">
             </div>
         </div>
-        <div class="main-content" id="main-content">
-            <div class="hero-segment">
-                <video autoplay muted playsinline loop class="hero-visual hidden-fade" src="static/images/animated_waves.mp4"></video>
-                <div class="hero-content">
-                    <h2 class="hero-title">Branding & Website</h2>
-                    <p class="hero-text">lorem ipsum dolor...</p>
-                </div>
-            </div>
+    </section>
+
+    <!-- Testimonials Section (One-Column) -->
+    <section class="service-testimonial-section">
+        <h2 class="service-testimonial-title">What Our Clients Say</h2>
+        <div class="service-testimonial-content">
+            <p class="service-testimonial-quote">"Netarch transformed our online presence with a stunning website and a cohesive brand identity. Our customer engagement has never been better!"</p>
+            <p class="service-testimonial-author">— Jane Doe, CEO of TechTrend Innovations</p>
         </div>
-        <div class="footbar">
-            <div class="footbar-section">
-                <h3 class="footbar-header">Contact Us</h3>
-                <div class="footbar-item"><a class="footbar-link" href="x.com">X</a></div>
-                <div class="footbar-item"><a class="footbar-link" href="https://www.linkedin.com/company/netarch-company">LinkedIn</a></div>
-                <div class="footbar-item"><a class="footbar-link" href="dribble.com">Dribble</a></div>
-                <div class="footbar-item"><a class="footbar-link" href="maitlto:contact@netarch.co">Mail</a></div>
-            </div>
-            <div class="footbar-section">
-                <h3 class="footbar-header">Contact Us</h3>
-                <div class="footbar-item"><a class="footbar-link" href="x.com">X</a></div>
-                <div class="footbar-item"><a class="footbar-link" href="https://www.linkedin.com/company/netarch-company">LinkedIn</a></div>
-                <div class="footbar-item"><a class="footbar-link" href="dribble.com">Dribble</a></div>
-                <div class="footbar-item"><a class="footbar-link" href="maitlto:contact@netarch.co">Mail</a></div>
-            </div>
-            <div class="footbar-section">
-                <h3 class="footbar-header">Contact Us</h3>
-                <div class="footbar-item"><a class="footbar-link" href="x.com">X</a></div>
-                <div class="footbar-item"><a class="footbar-link" href="https://www.linkedin.com/company/netarch-company">LinkedIn</a></div>
-                <div class="footbar-item"><a class="footbar-link" href="dribble.com">Dribble</a></div>
-                <div class="footbar-item"><a class="footbar-link" href="maitlto:contact@netarch.co">Mail</a></div>
-            </div>
+    </section>
+
+    <!-- CTA Section (One-Column) -->
+    <section class="service-cta-section">
+        <h2 class="service-cta-title">Ready to Build Your Brand?</h2>
+        <button class="service-cta-button" onclick="location.href='mailto:contact@netarch.co'">Contact Us</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footbar">
+        <div class="footbar-section">
+            <h3 class="footbar-header">Help</h3>
+            <div class="footbar-item"><a class="footbar-link" href="x.com">FAQ</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="https://www.linkedin.com/company/netarch-company">Placeholder</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="dribble.com">Placeholder</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="mailto:contact@netarch.co">Placeholder</a></div>
         </div>
-    </body>
-    <script src="static/js/scroller.js"></script>
-    <script defer src="static/js/main.js"></script>
+        <div class="footbar-section">
+            <h3 class="footbar-header">Info</h3>
+            <div class="footbar-item"><a class="footbar-link" href="x.com">Partners</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="https://www.linkedin.com/company/netarch-company">Products</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="dribble.com">Customer Notice</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="mailto:contact@netarch.co">Imprint</a></div>
+        </div>
+        <div class="footbar-section">
+            <h3 class="footbar-header">Contact Us</h3>
+            <div class="footbar-item"><a class="footbar-link" href="x.com">X</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="https://www.linkedin.com/company/netarch-company">LinkedIn</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="dribble.com">Dribble</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="mailto:contact@netarch.co">Mail</a></div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.navbar-menu');
+            const toggle = document.querySelector('.navbar-toggle');
+            menu.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+    </script>
+</body>
 </html>
