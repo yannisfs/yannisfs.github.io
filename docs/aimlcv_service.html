@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="AI, Machine Learning, and Computer Vision solutions by Netarch." />
+    <title>Netarch - AI, ML, or CV Solutions</title>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <img src="static/images/logo.png" alt="Netarch Logo" class="navbar-logo">
+        </div>
+        <div class="navbar-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="navbar-menu">
+            <a href="index.html" class="navbar-item navbar-secondary">Home</a>
+            <a href="brandwebsite_service.html" class="navbar-item navbar-secondary">Branding & Website</a>
+            <a href="appdev_service.html" class="navbar-item navbar-secondary">App Development</a>
+            <a href="aimlcv_service.html" class="navbar-item navbar-primary">AI/ML/CV Solutions</a>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="service-hero-section">
+        <video autoplay muted playsinline loop class="service-hero-video">
+            <source src="static/images/sky_video.mp4" type="video/mp4">
+        </video>
+        <div class="service-hero-content">
+            <h1 class="service-hero-title">AI, ML, or CV Solutions</h1>
+            <p class="service-hero-text">Harness the power of AI, machine learning, and computer vision to optimize your operations.</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section (Two-Column) -->
+    <section class="service-content-section">
+        <div class="service-content-two-column">
+            <div class="service-content-text">
+                <h2 class="service-content-title">Transform with AI</h2>
+                <p class="service-content-description">
+                    Netarch leverages cutting-edge AI, machine learning, and computer vision technologies to solve complex business challenges. From predictive analytics to image recognition, we deliver solutions that drive efficiency and innovation.
+                </p>
+                <ul class="service-content-list">
+                    <li>Predictive analytics and data modeling</li>
+                    <li>Image and video analysis with CV</li>
+                    <li>Custom AI model development</li>
+                </ul>
+            </div>
+            <div class="service-content-image">
+                <img src="static/images/ai_generated_software_becoming_alive.jpg" alt="AI, ML, CV Solutions" class="service-content-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (One-Column) -->
+    <section class="service-testimonial-section">
+        <h2 class="service-testimonial-title">What Our Clients Say</h2>
+        <div class="service-testimonial-content">
+            <p class="service-testimonial-quote">"Netarch’s AI solutions have revolutionized our data analysis, saving us countless hours and improving accuracy."</p>
+            <p class="service-testimonial-author">— Sarah Lee, CTO of DataDriven Co.</p>
+        </div>
+    </section>
+
+    <!-- CTA Section (One-Column) -->
+    <section class="service-cta-section">
+        <h2 class="service-cta-title">Ready to Innovate with AI?</h2>
+        <button class="service-cta-button" onclick="location.href='mailto:contact@netarch.co'">Contact Us</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footbar">
+        <div class="footbar-section">
+            <h3 class="footbar-header">Help</h3>
+            <div class="footbar-item"><a class="footbar-link" href="x.com">FAQ</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="https://www.linkedin.com/company/netarch-company">Placeholder</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="dribble.com">Placeholder</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="mailto:contact@netarch.co">Placeholder</a></div>
+        </div>
+        <div class="footbar-section">
+            <h3 class="footbar-header">Info</h3>
+            <div class="footbar-item"><a class="footbar-link" href="x.com">Partners</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="https://www.linkedin.com/company/netarch-company">Products</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="dribble.com">Customer Notice</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="mailto:contact@netarch.co">Imprint</a></div>
+        </div>
+        <div class="footbar-section">
+            <h3 class="footbar-header">Contact Us</h3>
+            <div class="footbar-item"><a class="footbar-link" href="x.com">X</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="https://www.linkedin.com/company/netarch-company">LinkedIn</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="dribble.com">Dribble</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="mailto:contact@netarch.co">Mail</a></div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.navbar-menu');
+            const toggle = document.querySelector('.navbar-toggle');
+            menu.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

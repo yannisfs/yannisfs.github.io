@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Custom App Development solutions by Netarch." />
+    <title>Netarch - App Development Solutions</title>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <img src="static/images/logo.png" alt="Netarch Logo" class="navbar-logo">
+        </div>
+        <div class="navbar-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="navbar-menu">
+            <a href="index.html" class="navbar-item navbar-secondary">Home</a>
+            <a href="brandwebsite_service.html" class="navbar-item navbar-secondary">Branding & Website</a>
+            <a href="appdev_service.html" class="navbar-item navbar-primary">App Development</a>
+            <a href="aimlcv_service.html" class="navbar-item navbar-secondary">AI/ML/CV Solutions</a>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="service-hero-section">
+        <video autoplay muted playsinline loop class="service-hero-video">
+            <source src="static/images/sky_video.mp4" type="video/mp4">
+        </video>
+        <div class="service-hero-content">
+            <h1 class="service-hero-title">App Development Solutions</h1>
+            <p class="service-hero-text">From concept to launch, we build apps that enhance user experience and efficiency.</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section (Two-Column) -->
+    <section class="service-content-section">
+        <div class="service-content-two-column">
+            <div class="service-content-text">
+                <h2 class="service-content-title">Innovative Apps for Your Business</h2>
+                <p class="service-content-description">
+                    Netarch delivers custom mobile and web applications tailored to your needs. We focus on user-centric design, seamless functionality, and cross-platform compatibility to ensure your app stands out in the market.
+                </p>
+                <ul class="service-content-list">
+                    <li>iOS and Android app development</li>
+                    <li>Cross-platform solutions</li>
+                    <li>UI/UX design and testing</li>
+                </ul>
+            </div>
+            <div class="service-content-image">
+                <img src="static/images/window_app_wall_picture.jpg" alt="App Development" class="service-content-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (One-Column) -->
+    <section class="service-testimonial-section">
+        <h2 class="service-testimonial-title">What Our Clients Say</h2>
+        <div class="service-testimonial-content">
+            <p class="service-testimonial-quote">"The app Netarch developed for us has streamlined our operations and boosted user engagement significantly."</p>
+            <p class="service-testimonial-author">— John Smith, Founder of AppWorks</p>
+        </div>
+    </section>
+
+    <!-- CTA Section (One-Column) -->
+    <section class="service-cta-section">
+        <h2 class="service-cta-title">Ready to Build Your App?</h2>
+        <button class="service-cta-button" onclick="location.href='mailto:contact@netarch.co'">Contact Us</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footbar">
+        <div class="footbar-section">
+            <h3 class="footbar-header">Help</h3>
+            <div class="footbar-item"><a class="footbar-link" href="x.com">FAQ</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="https://www.linkedin.com/company/netarch-company">Placeholder</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="dribble.com">Placeholder</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="mailto:contact@netarch.co">Placeholder</a></div>
+        </div>
+        <div class="footbar-section">
+            <h3 class="footbar-header">Info</h3>
+            <div class="footbar-item"><a class="footbar-link" href="x.com">Partners</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="https://www.linkedin.com/company/netarch-company">Products</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="dribble.com">Customer Notice</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="mailto:contact@netarch.co">Imprint</a></div>
+        </div>
+        <div class="footbar-section">
+            <h3 class="footbar-header">Contact Us</h3>
+            <div class="footbar-item"><a class="footbar-link" href="x.com">X</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="https://www.linkedin.com/company/netarch-company">LinkedIn</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="dribble.com">Dribble</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="mailto:contact@netarch.co">Mail</a></div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.navbar-menu');
+            const toggle = document.querySelector('.navbar-toggle');
+            menu.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
