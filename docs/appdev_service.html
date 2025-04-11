@@ -6,13 +6,18 @@
     <meta name="description" content="Custom App Development solutions by Netarch." />
     <title>Netarch - App Development Solutions</title>
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="static/css/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="navbar-brand">
             <img src="static/images/logo.png" alt="Netarch Logo" class="navbar-logo">
+        </div>
+        <div class="navbar-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
         <div class="navbar-menu">
             <a href="index.html" class="navbar-item navbar-secondary">Home</a>
@@ -92,5 +97,14 @@
             <div class="footbar-item"><a class="footbar-link" href="mailto:contact@netarch.co">Mail</a></div>
         </div>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.navbar-menu');
+            const toggle = document.querySelector('.navbar-toggle');
+            menu.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
