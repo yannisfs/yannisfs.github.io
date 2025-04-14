@@ -1174,6 +1174,7 @@ g {
     text-align: center;
     overflow: hidden;
     background-color: var(--netarch-sig-primary);
+    margin-top: 60px;
 }
 
 .service-hero-video {
