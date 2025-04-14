@@ -1340,10 +1340,6 @@ g {
         width: 100%;
     }
 
-    .navbar-brand {
-        width: 40%;
-    }
-
     .navbar-toggle {
         display: flex;
     }
