@@ -1060,7 +1060,6 @@ g {
     min-height: 20vh;
     width: 100%;
     background-color: white;
-    margin-top: 60px; /* Adjusted for fixed navbar */
 }
 
 .separator {
@@ -1175,7 +1174,6 @@ g {
     text-align: center;
     overflow: hidden;
     background-color: var(--netarch-sig-primary);
-    margin-top: 60px; /* Adjusted for fixed navbar */
 }
 
 .service-hero-video {
@@ -1496,7 +1494,6 @@ g {
     align-items: center;
     text-align: center;
     overflow: hidden;
-    margin-top: 60px; /* Adjusted for fixed navbar */
 }
 
 .hero-video {
