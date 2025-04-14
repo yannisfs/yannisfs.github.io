@@ -571,7 +571,7 @@ body {
 /* Hero Section */
 .hero-section {
     position: relative;
-    height: 100vh;
+    height: 100svh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1010,7 +1010,7 @@ button:hover {
 /* index.html specific styles */
 
 .entrance-section {
-    height: 100vh;
+    height: 100svh;
     width: 100%;
     background-color: var(--berlin-gray);
     display: flex;
