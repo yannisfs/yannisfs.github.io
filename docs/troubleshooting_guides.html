@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Netarch - Troubleshooting Guides</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="google-site-verification" content="snQ83qugK9pGb-jvhta9NohbepOSY3ZaAvw58kk79xo" />
+    <meta name="description" content="Step-by-step troubleshooting guides for Netarch's IT solutions, including apps, websites, and AI/ML services." />
+    <meta property="og:title" content="Netarch Troubleshooting Guides" />
+    <meta property="og:description" content="Resolve common issues with your IT solutions using Netarch's troubleshooting guides." />
+    <meta property="og:url" content="https://netarch.co/troubleshooting_guides.html" />
+    <meta property="og:image" content="https://netarch.co/static/images/Quicklink_Thumbnail_Netarch.png" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card tags-->
+    <meta name="twitter:card" content="Company Logo"/>
+    <meta name="twitter:title" content="Netarch Troubleshooting Guides"/>
+    <meta name="twitter:description" content="Resolve common issues with your IT solutions using Netarch's troubleshooting guides."/>
+    <meta name="twitter:image" content="https://netarch.co/static/images/Quicklink_Thumbnail_Netarch.png" />
+
+    <!-- link to favicon-->
+    <link rel="shortcut icon" href="static/images/favicon.png" type="image/png" />
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static/css/styles.css" />
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <img src="static/images/netarch_icon_text.png" alt="Netarch Logo" class="navbar-logo">
+        </div>
+        <div class="navbar-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="navbar-menu">
+            <a href="index.html" class="navbar-item navbar-secondary">Home</a>
+            <a href="brandwebsite_service.html" class="navbar-item navbar-secondary">Branding & Website</a>
+            <a href="appdev_service.html" class="navbar-item navbar-secondary">App Development</a>
+            <a href="aimlcv_service.html" class="navbar-item navbar-secondary">AI/ML/CV Solutions</a>
+            <a href="about_us.html" class="navbar-item navbar-secondary">About Us</a>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="service-hero-section">
+        <video autoplay muted playsinline loop class="service-hero-video">
+            <source src="static/images/sky_video.mp4" type="video/mp4">
+        </video>
+        <div class="service-hero-content">
+            <h1 class="service-hero-title">Troubleshooting Guides</h1>
+            <p class="service-hero-text">Quick solutions to common issues with your IT solutions.</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="service-content-section">
+        <div class="service-content-text">
+            <h2 class="service-content-title">Resolve Issues Fast</h2>
+            <p class="service-content-description">
+                Our troubleshooting guides are designed to help you quickly address common problems with your Netarch solutions. Whether your website isn’t loading, your app is crashing, or your AI model isn’t performing as expected, we’ve got step-by-step solutions for you.
+            </p>
+            <p class="service-content-description">
+                Last updated: May 15, 2025, 10:37 PM CEST.
+            </p>
+        </div>
+    </section>
+
+    <!-- Branding & Website Troubleshooting -->
+    <section class="service-content-section">
+        <div class="service-content-text">
+            <h2 class="service-content-title">Branding & Website</h2>
+            <div class="troubleshoot-item">
+                <h3 class="troubleshoot-title">Website Not Loading</h3>
+                <p class="troubleshoot-description">
+                    If your website isn’t loading, follow these steps:  
+                    1. **Check Your Internet Connection**: Ensure your device is connected to the internet. Try loading another site to confirm.  
+                    2. **Clear Browser Cache**: Go to your browser settings (e.g., Chrome’s "Clear Browsing Data") and clear the cache and cookies.  
+                    3. **Verify Hosting Status**: Log into your hosting provider’s dashboard (e.g., AWS, Bluehost) to check for downtime. Netarch uses reliable hosting partners—see our <a href="partners.html">Partners</a> page.  
+                    4. **Inspect DNS Settings**: Ensure your domain’s DNS records are correctly configured. A common issue is an incorrect A record—your domain should point to your server’s IP address.  
+                    If the issue persists, contact our <a href="support_center.html">Support Center</a> with your site URL and error details.
+                </p>
+            </div>
+            <div class="troubleshoot-item">
+                <h3 class="troubleshoot-title">Images Not Displaying on Website</h3>
+                <p class="troubleshoot-description">
+                    If images aren’t showing on your website:  
+                    1. **Check File Paths**: Ensure the image path in your HTML is correct (e.g., `<img src="static/images/example.jpg">`). Paths are case-sensitive.  
+                    2. **Verify File Upload**: Confirm the image file exists on your server in the specified directory. Use your hosting file manager to check.  
+                    3. **Inspect Image Format**: Use web-friendly formats like JPEG or PNG. Netarch’s images, like `mobile_gui_mockup.png`, are optimized for web.  
+                    4. **Test Alt Text**: Ensure your `<img>` tag has an `alt` attribute (e.g., `alt="App Development"`), which helps with accessibility and debugging.  
+                    Still seeing a broken image icon? Reach out to our <a href="support_center.html">Support Center</a> for assistance.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Development Troubleshooting -->
+    <section class="service-content-section">
+        <div class="service-content-text">
+            <h2 class="service-content-title">App Development</h2>
+            <div class="troubleshoot-item">
+                <h3 class="troubleshoot-title">App Crashing on Startup</h3>
+                <p class="troubleshoot-description">
+                    If your app crashes immediately after launching:  
+                    1. **Update the App**: Ensure you’re running the latest version. Check the App Store (iOS) or Play Store (Android) for updates—Netarch apps are updated regularly.  
+                    2. **Restart Your Device**: A simple reboot can resolve temporary glitches. On iOS, hold the power button; on Android, press power and select "Restart."  
+                    3. **Check Storage Space**: Apps need free space to run. On iOS, go to Settings > General > iPhone Storage; on Android, Settings > Storage. Free up at least 500 MB.  
+                    4. **Reinstall the App**: Delete and reinstall the app to clear corrupted files. Ensure you back up any app data first if applicable.  
+                    If the issue continues, visit our <a href="knowledge_base.html">Knowledge Base</a> for advanced debugging tips or contact <a href="support_center.html">Support</a>.
+                </p>
+            </div>
+            <div class="troubleshoot-item">
+                <h3 class="troubleshoot-title">App Not Syncing Data</h3>
+                <p class="troubleshoot-description">
+                    If your app isn’t syncing data properly:  
+                    1. **Check Internet Connection**: Ensure you have a stable Wi-Fi or mobile data connection. Test by loading a webpage.  
+                    2. **Verify App Permissions**: On iOS, go to Settings > Privacy; on Android, Settings > Apps > [App Name]. Grant necessary permissions like internet access.  
+                    3. **Force Sync**: Look for a sync option in the app settings—Netarch apps often have a "Refresh Data" button in the menu.  
+                    4. **Clear App Cache**: On Android, go to Settings > Apps > [App Name] > Storage > Clear Cache. On iOS, you may need to reinstall the app.  
+                    Still not syncing? Contact our <a href="support_center.html">Support Center</a> with details of the data not syncing (e.g., user profile, transactions).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI/ML/CV Solutions Troubleshooting -->
+    <section class="service-content-section">
+        <div class="service-content-text">
+            <h2 class="service-content-title">AI/ML/CV Solutions</h2>
+            <div class="troubleshoot-item">
+                <h3 class="troubleshoot-title">AI Model Predictions Are Inaccurate</h3>
+                <p class="troubleshoot-description">
+                    If your AI model’s predictions are off:  
+                    1. **Check Input Data**: Ensure your input data matches the format used during training (e.g., image resolution of 224x224 for a ResNet model). Use tools like Python’s `PIL` to resize images.  
+                    2. **Verify Data Quality**: Poor data quality (e.g., noisy images, incomplete datasets) can degrade performance. Review your dataset for inconsistencies.  
+                    3. **Test Model Version**: Ensure you’re using the latest model version deployed by Netarch. Check your client portal for updates—our latest CV models use YOLOv8 (as of May 2025).  
+                    4. **Adjust Thresholds**: For classification tasks, adjust the confidence threshold (e.g., increase from 0.5 to 0.7) to reduce false positives.  
+                    Need deeper analysis? Refer to our <a href="knowledge_base.html">Knowledge Base</a> article on "Understanding AI Model Training" or contact <a href="support_center.html">Support</a>.
+                </p>
+            </div>
+            <div class="troubleshoot-item">
+                <h3 class="troubleshoot-title">Computer Vision Not Detecting Objects</h3>
+                <p class="troubleshoot-description">
+                    If your CV system isn’t detecting objects:  
+                    1. **Check Lighting Conditions**: Poor lighting can affect detection. Ensure images have adequate brightness—aim for at least 50 lux for indoor settings.  
+                    2. **Verify Object Size**: Objects must be within the model’s detection range (e.g., at least 10% of the image area for YOLO models). Resize or reposition the object.  
+                    3. **Update Model**: Ensure your model is up to date. Netarch’s CV models are updated quarterly—check your client portal for the latest version.  
+                    4. **Test with Sample Data**: Use our sample dataset (available in your client portal) to confirm the model works as expected.  
+                    If detection still fails, reach out to our <a href="support_center.html">Support Center</a> with a sample image and model version.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="service-cta-section">
+        <h2 class="service-cta-title">Still Having Issues?</h2>
+        <button class="service-cta-button" onclick="location.href='support_center.html'">Contact Support</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footbar">
+        <div class="footbar-section">
+            <h3 class="footbar-header">Help</h3>
+            <div class="footbar-item"><a class="footbar-link" href="faq.html">FAQ</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="support_center.html">Support Center</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="knowledge_base.html">Knowledge Base</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="troubleshooting_guides.html">Troubleshooting Guides</a></div>
+        </div>
+        <div class="footbar-section">
+            <h3 class="footbar-header">Info</h3>
+            <div class="footbar-item"><a class="footbar-link" href="partners.html">Partners</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="it_solution_package.html">Products</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="customer_notice.html">Customer Notice</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="imprint.html">Imprint</a></div>
+        </div>
+        <div class="footbar-section">
+            <h3 class="footbar-header">Contact Us</h3>
+            <div class="footbar-item"><a class="footbar-link" href="https://x.com/netarchcompany">X</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="https://www.linkedin.com/company/netarch-company">LinkedIn</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="https://dribbble.com">Dribbble</a></div>
+            <div class="footbar-item"><a class="footbar-link" href="mailto:contact@netarch.co">Mail</a></div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.navbar-menu');
+            const toggle = document.querySelector('.navbar-toggle');
+            menu.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

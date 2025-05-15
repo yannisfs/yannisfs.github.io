@@ -1635,3 +1635,45 @@ g {
 }
 
 /* IT Solution Package specific styles end */
+
+/* Knowledge Base specific styles start */
+
+.knowledge-item {
+    margin-bottom: 20px;
+}
+
+.knowledge-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--netarch-sig-primary);
+    margin-bottom: 10px;
+}
+
+.knowledge-description {
+    font-size: 1rem;
+    color: var(--netarch-sig-secondary);
+    line-height: 1.6;
+}
+
+/* Knowledge Base specific styles end */
+
+/* Troubleshooting Guides specific styles start */
+
+.troubleshoot-item {
+    margin-bottom: 20px;
+}
+
+.troubleshoot-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--netarch-sig-primary);
+    margin-bottom: 10px;
+}
+
+.troubleshoot-description {
+    font-size: 1rem;
+    color: var(--netarch-sig-secondary);
+    line-height: 1.6;
+}
+
+/* Troubleshooting Guides specific styles end */
