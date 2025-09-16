@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Sterntal Performance Center</title>
+  <style>
+    /* ====== Base / Mobile‑first styles ====== */
+    :root{
+      --bg:#0a0a0a; /* near-black */
+      --surface:#101010;
+      --text:#eaeaea;
+      --muted:#bdbdbd;
+      --brand:#e40000; /* Sterntal red */
+      --accent:#ffffff;
+      --max:1100px;
+      --radius:18px;
+      --shadow:0 10px 25px rgba(0,0,0,.35);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; color:var(--text); background:var(--bg);
+      font:16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+
+    a{color:inherit; text-decoration:none}
+    img{max-width:100%; display:block}
+    .container{width:100%; max-width:var(--max); margin-inline:auto; padding:0 20px}
+    .visually-hidden{position:absolute!important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px); white-space:nowrap}
+
+    /* Focus styles for accessibility */
+    :focus-visible{outline:2px solid var(--brand); outline-offset:2px}
+
+    /* ====== Header / Nav ====== */
+    header{
+      position:fixed; inset:0 0 auto 0; z-index:50; 
+      padding:10px 0; transition:background .25s ease, box-shadow .25s ease;
+      background:transparent;
+    }
+    header.scrolled{background:rgba(0,0,0,.55); backdrop-filter:blur(8px); box-shadow:0 2px 12px rgba(0,0,0,.2)}
+
+    .nav{display:flex; align-items:center; justify-content:space-between}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700}
+    .brand__logo{width:28px; height:28px; display:grid; grid-auto-flow:column; gap:3px}
+    .brand__logo span{background:#000; display:block}
+    .brand__logo span:nth-child(1), .brand__logo span:nth-child(3){transform:skewX(-18deg)}
+    .brand__logo span:nth-child(1){width:11px}
+    .brand__logo span:nth-child(2){width:20px; background:#000}
+    .brand__word{font-weight:800; letter-spacing:.2px}
+    .brand__word .red{color:var(--brand)}
+
+    .menu{display:none; gap:22px; align-items:center}
+    .menu a{color:var(--muted)}
+    .menu a:hover{color:var(--text)}
+
+    .cta-mini{display:none}
+    .hamburger{background:transparent; border:0; color:var(--text); font-size:26px; line-height:1; padding:8px; border-radius:10px}
+
+    /* Mobile menu */
+    .mobile-drawer{position:fixed; inset:auto 0 0 0; background:#0c0c0c; border-top:1px solid #1f1f1f; display:none}
+    .mobile-drawer.open{display:block}
+    .mobile-drawer a{display:block; padding:16px 22px; border-bottom:1px solid #161616; color:var(--muted)}
+    .mobile-drawer a:hover{color:var(--text)}
+
+    /* ====== Hero with video background ====== */
+    .hero{position:relative; min-height:100svh; display:grid; place-items:center; text-align:center; overflow:hidden}
+    .hero video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-2}
+    .hero::after{content:""; position:absolute; inset:0; z-index:-1;
+      background:radial-gradient(1200px 600px at 50% 10%, rgba(0,0,0,.1), rgba(0,0,0,.65) 50%, rgba(0,0,0,.85) 85%),
+                 linear-gradient(to top, rgba(0,0,0,.5), rgba(0,0,0,.1));
+    }
+
+    .hero__inner{padding:120px 0 88px;}
+    .eyebrow{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border:1px solid #262626; border-radius:999px; background:rgba(0,0,0,.35); color:#d7d7d7; font-size:12px}
+    h1{margin:14px 0 10px; font-size:clamp(28px, 6vw, 56px); line-height:1.05; font-weight:800; letter-spacing:.2px}
+    .lead{max-width:40ch; margin:0 auto 22px; color:#dddddd}
+
+    .cta-row{display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:10px}
+    .btn{display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:12px 18px; border-radius:999px; border:1px solid transparent; font-weight:700; letter-spacing:.2px; transition:transform .12s ease, box-shadow .12s ease, background .2s ease}
+    .btn:active{transform:translateY(1px)}
+    .btn--primary{background:var(--brand); color:#fff; box-shadow:var(--shadow)}
+    .btn--primary:hover{filter:saturate(1.2) brightness(1.02)}
+    .btn--ghost{background:rgba(255,255,255,.05); border-color:#2c2c2c; color:#f3f3f3}
+    .btn--ghost:hover{background:rgba(255,255,255,.08)}
+
+    .badges{display:flex; gap:12px; justify-content:center; margin-top:18px; opacity:.9}
+    .badge{font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid #262626; color:#cfcfcf; background:rgba(0,0,0,.3)}
+
+    /* ====== Sections ====== */
+    section{padding:56px 0}
+    .section-title{font-size:clamp(22px, 3.5vw, 34px); margin:0 0 6px; font-weight:800}
+    .section-lead{color:var(--muted); max-width:60ch}
+
+    .features{display:grid; grid-template-columns:1fr; gap:14px; margin-top:24px}
+    .card{background:var(--surface); border:1px solid #1b1b1b; border-radius:var(--radius); padding:18px; box-shadow:var(--shadow)}
+    .card h3{margin:0 0 6px; font-size:18px}
+    .icon{width:28px; height:28px; border-radius:8px; background:#1a1a1a; display:grid; place-items:center; margin-bottom:10px}
+
+    .grid-2{display:grid; grid-template-columns:1fr; gap:14px; margin-top:24px}
+    .tile{position:relative; overflow:hidden; border-radius:var(--radius); border:1px solid #1b1b1b; background:#0e0e0e}
+    .tile img{width:100%; height:220px; object-fit:cover; filter:saturate(1) contrast(1.05)}
+    .tile .blurb{padding:12px 14px}
+    .tile .blurb h4{margin:0 0 4px}
+    .pill{display:inline-block; font-size:12px; padding:4px 8px; border:1px solid #2b2b2b; border-radius:999px; color:#cfcfcf}
+
+    .testimonial{display:grid; gap:10px; margin-top:18px}
+    .quote{font-size:15px; color:#d8d8d8}
+    .byline{color:#aaaaaa; font-size:14px}
+
+    .contact{display:grid; gap:12px; margin-top:22px}
+    .field{display:grid; gap:6px}
+    .field input, .field textarea{
+      width:100%; color:#f5f5f5; background:#0d0d0d; border:1px solid #1e1e1e; border-radius:12px; padding:12px 14px
+    }
+    .field textarea{min-height:120px; resize:vertical}
+
+    footer{border-top:1px solid #161616; color:#a8a8a8; background:#0b0b0b}
+
+    /* ====== Responsive (Tablet & Desktop) ====== */
+    @media (min-width: 700px){
+      .menu{display:flex}
+      .cta-mini{display:inline-flex}
+      .hamburger{display:none}
+      .features{grid-template-columns:repeat(3,1fr)}
+      .grid-2{grid-template-columns:repeat(2,1fr)}
+      .testimonial{grid-template-columns:repeat(3,1fr)}
+      .tile img{height:260px}
+    }
+
+    @media (min-width: 1020px){
+      .hero__inner{padding:140px 0 110px}
+      .tile img{height:320px}
+    }
+
+    /* Prefer reduced motion: pause/hide video */
+    @media (prefers-reduced-motion: reduce){
+      .hero video{display:none}
+      .hero{background: url('static/images/ai_generated_software_becoming_alive.jpg') center/cover no-repeat fixed}
+    }
+  </style>
+</head>
+<body>
+  <a class="visually-hidden" href="#main">Skip to content</a>
+
+  <!-- ===== Header / Navigation ===== -->
+  <header id="site-header" aria-label="Primary">
+    <div class="container nav">
+      <a href="#" class="brand" aria-label="Sterntal home">
+        <span class="brand__logo" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span class="brand__word"><span class="red">Sterntal</span> Performance Center</span>
+      </a>
+
+      <nav class="menu" aria-label="Main menu">
+        <a href="#collection">Collection</a>
+        <a href="#services">Services</a>
+        <a href="#sell">Sell</a>
+        <a href="#contact" class="cta-mini btn btn--ghost">Contact</a>
+      </nav>
+
+      <button class="hamburger" aria-label="Open menu" aria-controls="mobile-drawer" aria-expanded="false">☰</button>
+    </div>
+
+    <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile menu">
+      <a href="#collection">Collection</a>
+      <a href="#services">Services</a>
+      <a href="#sell">Sell Your Mercedes</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- ===== Hero with Video Background ===== -->
+  <section class="hero" aria-label="Sterntal hero">
+    <!-- Replace src and poster with your files -->
+    <video id="bg-video" autoplay muted loop playsinline poster="poster.jpg">
+      <source src="video.mp4" type="video/mp4" />
+      <!-- Optional WebM for better quality/smaller size -->
+      <source src="video.webm" type="video/webm" />
+    </video>
+
+    <div class="hero__inner container">
+      <span class="eyebrow" aria-label="Tagline">Mercedes‑Focused • Curated • Verified</span>
+      <h1>Where the Three‑Pointed Star Meets Perfection</h1>
+      <p class="lead">We curate, verify, and deliver exceptional Mercedes‑Benz and AMG vehicles for collectors and drivers who demand the best.</p>
+      <div class="cta-row">
+        <a href="#collection" class="btn btn--primary">Browse Collection</a>
+        <a href="#sell" class="btn btn--ghost">Sell Your Mercedes</a>
+      </div>
+      <div class="badges">
+        <span class="badge">Inspection Report Included</span>
+        <span class="badge">Consignment Available</span>
+        <span class="badge">Worldwide Shipping</span>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <!-- ===== Features / Why Sterntal ===== -->
+    <section id="services">
+      <div class="container">
+        <h2 class="section-title">The Sterntal Standard</h2>
+        <p class="section-lead">Every car is hand‑selected and verified by marque specialists. From classic Pagodas to modern AMG GTs—only the finest examples make the cut.</p>
+        <div class="features">
+          <article class="card">
+            <div class="icon" aria-hidden="true">🏁</div>
+            <h3>Curated Performance</h3>
+            <p>Low‑mileage, well‑documented Mercedes‑Benz and AMG inventory, selected for provenance and condition.</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">🧪</div>
+            <h3>Verification & Reports</h3>
+            <p>Comprehensive inspections with paint meter readings, OBD scans, and service history verification.</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">🚚</div>
+            <h3>White‑Glove Logistics</h3>
+            <p>Secured storage, enclosed transport, and worldwide delivery handled end‑to‑end by our team.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Collection preview ===== -->
+    <section id="collection">
+      <div class="container">
+        <h2 class="section-title">Featured Collection</h2>
+        <p class="section-lead">A rotating selection of standout cars. Contact us for the full catalog.</p>
+        <div class="grid-2">
+          <article class="tile">
+            <img src="car1.jpg" alt="Mercedes AMG GT in matte grey parked in studio lighting" />
+            <div class="blurb">
+              <h4>AMG&nbsp;GT R Pro</h4>
+              <span class="pill">2019 • 8,200 mi</span>
+            </div>
+          </article>
+          <article class="tile">
+            <img src="car2.jpg" alt="Classic Mercedes 280SL Pagoda restored in silver" />
+            <div class="blurb">
+              <h4>280SL Pagoda</h4>
+              <span class="pill">1969 • Concours</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Testimonials ===== -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Trusted by Enthusiasts</h2>
+        <div class="testimonial">
+          <div class="card">
+            <p class="quote">“Flawless experience from sourcing to delivery. The inspection report was the most thorough I’ve seen.”</p>
+            <p class="byline">— M. Fischer, Munich</p>
+          </div>
+          <div class="card">
+            <p class="quote">“Sterntal sold my C63 Black Series in two weeks at target price. Transparent and professional.”</p>
+            <p class="byline">— J. Patel, London</p>
+          </div>
+          <div class="card">
+            <p class="quote">“They understand the brand, the history, and the buyer. Five stars.”</p>
+            <p class="byline">— C. Johnson, California</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Sell / Consign ===== -->
+    <section id="sell">
+      <div class="container">
+        <h2 class="section-title">Consign with Confidence</h2>
+        <p class="section-lead">We manage marketing, inquiries, viewings, and delivery. You approve the price—we handle the rest.</p>
+        <div class="cta-row">
+          <a href="#contact" class="btn btn--primary">Request Valuation</a>
+          <a href="#contact" class="btn btn--ghost">Talk to a Specialist</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact Sterntal</h2>
+        <p class="section-lead">Tell us what you’re looking for—or what you’re selling—and we’ll reply within one business day.</p>
+        <form class="contact" action="#" method="post" onsubmit="event.preventDefault(); alert('Thanks! We\'ll be in touch.');">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="I\'m interested in…"></textarea>
+          </div>
+          <button class="btn btn--primary" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between; padding:18px 0;">
+      <small>© <span id="year"></span> Sterntal Performance Center</small>
+      <small>Privacy • Terms • Imprint</small>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile drawer toggle
+    const burger = document.querySelector('.hamburger');
+    const drawer = document.getElementById('mobile-drawer');
+    burger?.addEventListener('click', () => {
+      const isOpen = drawer.classList.toggle('open');
+      burger.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // Header background on scroll
+    const header = document.getElementById('site-header');
+    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 10);
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+
+    // Pause background video if user prefers reduced motion
+    const video = document.getElementById('bg-video');
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      if (video) { video.pause(); video.removeAttribute('src'); }
+    }
+
+    // Current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
