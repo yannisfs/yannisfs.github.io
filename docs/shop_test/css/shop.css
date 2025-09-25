@@ -1,75 +1,172 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>Sample Product – My Shop</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="./css/shop.css" rel="stylesheet" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="logo"><a href="./index.html">My Shop</a></h1>
-    </div>
-  </header>
+/* ======= Mobile-first base ======= */
+:root {
+  --gap: 1rem;
+  --gap-lg: 1.5rem;
+  --radius: 12px;
+  --maxw: 1200px;
 
-  <main class="container product-detail">
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <a href="./index.html">All products</a>
-      <span aria-hidden="true">/</span>
-      <span class="current">Sample Product</span>
-    </nav>
+  color-scheme: light dark;
+  --bg: light-dark(#ffffff, #0e0f12);
+  --panel: light-dark(#f8fafc, #171a21);
+  --muted: light-dark(#475569, #9aa3af);
+  --text: light-dark(#0f172a, #e5e7eb);
+  --brand: #4f46e5;
+  --brand-600: #4338ca;
+}
 
-    <article>
-      <div class="product-detail__media">
-        <img class="product-detail__image" src="https://picsum.photos/seed/one/1200/900" alt="Sample Product">
-      </div>
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
 
-      <div class="product-detail__info">
-        <h2 class="product-detail__title">Sample Product</h2>
-        <p class="price price--lg">29.00 EUR</p>
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 clamp(12px, 4vw, 24px);
+}
 
-        <div class="product-detail__desc">
-          <p>This is a demo product page you can use to test the flow and responsive design. Replace the text and images with your real content later.</p>
-        </div>
+/* Header / Footer */
+.site-header, .site-footer {
+  background: var(--panel);
+  border-bottom: 1px solid color-mix(in oklab, var(--text) 12%, transparent);
+}
+.site-footer { border-top: 1px solid color-mix(in oklab, var(--text) 12%, transparent); }
+.site-header .container,
+.site-footer .container { padding: var(--gap); }
+.logo { font-size: clamp(1.1rem, 2vw, 1.4rem); margin: 0; }
+.logo a { color: inherit; text-decoration: none; }
 
-        <!-- PayPal Sandbox Buy Now (collects shipping on PayPal) -->
-        <form class="paypal-form" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
-          <input type="hidden" name="cmd" value="_xclick" />
-          <!-- Use your sandbox business email or merchant ID here -->
-          <input type="hidden" name="business" value="sb-merchant@example.com" />
-          <input type="hidden" name="item_name" value="Sample Product" />
-          <input type="hidden" name="item_number" value="SKU-123" />
-          <input type="hidden" name="amount" value="29.00" />
-          <input type="hidden" name="currency_code" value="EUR" />
-          <input type="hidden" name="no_shipping" value="0" />
-          <!-- For local testing, these URLs can point back to this file or a thanks page -->
-          <input type="hidden" name="return" value="http://localhost/product.html" />
-          <input type="hidden" name="cancel_return" value="http://localhost/index.html" />
-          <!-- Optional custom field to correlate purchases -->
-          <input type="hidden" name="custom" value="guest:SKU-123" />
+/* Utilities */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden; clip: rect(1px,1px,1px,1px);
+  white-space: nowrap;
+}
+.small { font-size: 0.9rem; }
+.meta { color: var(--muted); }
+.price { font-weight: 700; }
+.price--lg { font-size: clamp(1.125rem, 2.5vw, 1.7rem); }
 
-          <button type="submit" class="btn primary btn-buy" aria-label="Buy Sample Product now with PayPal">
-            Buy now with PayPal
-          </button>
-          <p class="meta small">
-            Shipping & contact info are collected on PayPal.
-          </p>
-        </form>
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn.primary { background: var(--brand); color: #fff; }
+.btn.primary:hover { background: var(--brand-600); }
+.btn:focus-visible {
+  outline: 3px solid color-mix(in oklab, var(--brand) 70%, white);
+  outline-offset: 2px;
+}
 
-        <p><a class="link-muted" href="./index.html">← Back to all products</a></p>
-      </div>
-    </article>
-  </main>
+.link-muted { color: var(--muted); text-decoration: none; }
+.link-muted:hover { text-decoration: underline; }
 
-  <footer class="site-footer">
-    <div class="container">
-      <small>&copy; <span id="year"></span> My Shop</small>
-    </div>
-  </footer>
+/* Product list (vertical stream) */
+.product-list {
+  list-style: none;
+  margin: var(--gap-lg) 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+}
+.product-card {
+  background: var(--panel);
+  border-radius: var(--radius);
+  overflow: clip;
+  box-shadow: 0 1px 0 color-mix(in oklab, var(--text) 8%, transparent);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.product-card:where(:hover, :focus-within) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px color-mix(in oklab, var(--text) 14%, transparent);
+}
+.product-card__link {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: var(--gap);
+  color: inherit;
+  text-decoration: none;
+  padding: var(--gap);
+}
+.product-card__image {
+  inline-size: 100%;
+  block-size: 96px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #e5e7eb1a;
+}
+.product-card__title { margin: 0 0 0.25rem 0; font-size: 1rem; }
+.product-card__desc  { margin: 0 0 0.5rem 0; color: var(--muted); font-size: 0.95rem; }
+.product-card__footer { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
+.cta { opacity: .7; }
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+/* empty state (used in Django version, kept for parity) */
+.empty { color: var(--muted); padding: var(--gap); text-align: center; }
+
+/* Product detail */
+.product-detail { margin: var(--gap-lg) 0; }
+.breadcrumbs {
+  display: flex; gap: .5rem; align-items: center;
+  color: var(--muted); font-size: .95rem; margin-bottom: var(--gap);
+}
+.breadcrumbs a { color: inherit; text-decoration: none; }
+.breadcrumbs a:hover { text-decoration: underline; }
+
+.product-detail article {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+.product-detail__image {
+  inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background: #e5e7eb1a;
+}
+.product-detail__title { margin: 0 0 .25rem 0; font-size: clamp(1.25rem, 3.2vw, 2rem); }
+.product-detail__desc p { margin-top: 0; }
+.paypal-form { margin: var(--gap) 0 var(--gap-lg); }
+.btn-buy { font-size: 1rem; }
+
+/* Responsive enhancements */
+@media (min-width: 480px) {
+  .product-card__link { grid-template-columns: 140px 1fr; }
+  .product-card__image { block-size: 140px; }
+}
+
+@media (min-width: 700px) {
+  .product-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .btn { width: auto; }
+  .product-detail article {
+    grid-template-columns: 1.1fr 1fr;
+    align-items: start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Motion & accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
