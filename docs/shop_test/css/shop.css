@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Sample Product – My Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="./css/shop.css" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo"><a href="./index.html">My Shop</a></h1>
+    </div>
+  </header>
+
+  <main class="container product-detail">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="./index.html">All products</a>
+      <span aria-hidden="true">/</span>
+      <span class="current">Sample Product</span>
+    </nav>
+
+    <article>
+      <div class="product-detail__media">
+        <img class="product-detail__image" src="https://picsum.photos/seed/one/1200/900" alt="Sample Product">
+      </div>
+
+      <div class="product-detail__info">
+        <h2 class="product-detail__title">Sample Product</h2>
+        <p class="price price--lg">29.00 EUR</p>
+
+        <div class="product-detail__desc">
+          <p>This is a demo product page you can use to test the flow and responsive design. Replace the text and images with your real content later.</p>
+        </div>
+
+        <!-- PayPal Sandbox Buy Now (collects shipping on PayPal) -->
+        <form class="paypal-form" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+          <input type="hidden" name="cmd" value="_xclick" />
+          <!-- Use your sandbox business email or merchant ID here -->
+          <input type="hidden" name="business" value="sb-merchant@example.com" />
+          <input type="hidden" name="item_name" value="Sample Product" />
+          <input type="hidden" name="item_number" value="SKU-123" />
+          <input type="hidden" name="amount" value="29.00" />
+          <input type="hidden" name="currency_code" value="EUR" />
+          <input type="hidden" name="no_shipping" value="0" />
+          <!-- For local testing, these URLs can point back to this file or a thanks page -->
+          <input type="hidden" name="return" value="http://localhost/product.html" />
+          <input type="hidden" name="cancel_return" value="http://localhost/index.html" />
+          <!-- Optional custom field to correlate purchases -->
+          <input type="hidden" name="custom" value="guest:SKU-123" />
+
+          <button type="submit" class="btn primary btn-buy" aria-label="Buy Sample Product now with PayPal">
+            Buy now with PayPal
+          </button>
+          <p class="meta small">
+            Shipping & contact info are collected on PayPal.
+          </p>
+        </form>
+
+        <p><a class="link-muted" href="./index.html">← Back to all products</a></p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> My Shop</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>My Shop – All Products</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="./css/shop.css" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">
+        <a href="./index.html" aria-label="My Shop home">My Shop</a>
+      </h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="visually-hidden">All Products</h2>
+
+    <ul class="product-list" role="list">
+      <!-- Product 1 -->
+      <li class="product-card">
+        <a class="product-card__link" href="./product.html">
+          <img class="product-card__image" src="https://picsum.photos/seed/one/600/400" alt="Sample Product" loading="lazy" decoding="async" />
+          <div class="product-card__body">
+            <h3 class="product-card__title">Sample Product</h3>
+            <p class="product-card__desc">A short description for demo purposes.</p>
+            <div class="product-card__footer">
+              <span class="price">29.00 EUR</span>
+              <span class="cta" aria-hidden="true">View →</span>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <!-- Product 2 -->
+      <li class="product-card">
+        <a class="product-card__link" href="./product.html">
+          <img class="product-card__image" src="https://picsum.photos/seed/two/600/400" alt="Another Product" loading="lazy" decoding="async" />
+          <div class="product-card__body">
+            <h3 class="product-card__title">Another Product</h3>
+            <p class="product-card__desc">Second example item to test the layout.</p>
+            <div class="product-card__footer">
+              <span class="price">59.00 EUR</span>
+              <span class="cta" aria-hidden="true">View →</span>
+            </div>
+          </div>
+        </a>
+      </li>
+
+      <!-- Product 3 -->
+      <li class="product-card">
+        <a class="product-card__link" href="./product.html">
+          <img class="product-card__image" src="https://picsum.photos/seed/three/600/400" alt="Third Product" loading="lazy" decoding="async" />
+          <div class="product-card__body">
+            <h3 class="product-card__title">Third Product</h3>
+            <p class="product-card__desc">One more card to see scrolling behavior.</p>
+            <div class="product-card__footer">
+              <span class="price">89.00 EUR</span>
+              <span class="cta" aria-hidden="true">View →</span>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> My Shop</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
