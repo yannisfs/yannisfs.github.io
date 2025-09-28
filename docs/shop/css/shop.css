@@ -1,215 +1,63 @@
-/* ===== Variables ===== */
-:root{
-  --header-h: 84px;
-  --gap: 1rem;
-  --gap-lg: 1.5rem;
-  --radius: 14px;
-
-  color-scheme: light dark;
-  --bg:    light-dark(#f1f5f9, #0f1115);  /* neutral backdrop for transparent PNGs */
-  --panel: light-dark(#ffffff, #171a21);  /* tile background */
-  --muted: light-dark(#5b6470, #98a2b3);
-  --text:  light-dark(#0f172a, #e5e7eb);
-  --brand: #4f46e5;
-  --brand-600:#4338ca;
-
-  /* tile sizing */
-  --tile-edge-m: 92vw;                 /* mobile (vertical) */
-  --tile-edge-d: min(64vh, 460px);     /* desktop: balanced square that fits the viewport */
+:root {
+  --bg: #0f1115;
+  --panel: #171a21;
+  --text: #e5e7eb;
 }
 
-/* ===== Base ===== */
-* { box-sizing: border-box; }
-html, body { height: 100%; }
-html { scroll-behavior: smooth; }
 body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
+  font-family: system-ui, sans-serif;
 }
 
-/* Page shell (flex everywhere) */
-.page {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* ===== Header (centered logo) ===== */
-.site-header {
-  height: var(--header-h);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .header-bar {
-  height: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 .logo-box {
-  width: 64px;
-  height: 64px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  width: 64px; height: 64px;
+  display: flex; align-items: center; justify-content: center;
 }
 .logo-box img { width: 100%; height: 100%; object-fit: contain; }
 
-/* ===== List view ===== */
-.viewport {
-  /* Fills the rest of the screen so the strip can size itself */
-  flex: 1 1 auto;
+/* carousel */
+.carousel-container {
   display: flex;
-  /* no extra chrome—just products */
-  padding: 0;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  height: calc(100vh - 100px);
 }
 
-/* Product strip: mobile column (flex) */
-.product-strip {
+.carousel {
   list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
   margin: 0;
-  padding: var(--gap-lg);
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: var(--gap-lg);
-  width: 100%;
+  align-items: center;
 }
+
 .tile {
-  background: var(--panel);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: 0 1px 0 color-mix(in oklab, var(--text) 10%, transparent);
+  flex: 0 0 auto;
+  width: 240px;
+  height: 240px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+  transition: transform 0.3s, opacity 0.3s;
 }
-.tile__link {
-  display: flex;
+.tile img {
   width: 100%;
-}
-.tile__img {
-  /* perfect square with inner breathing room; works great for transparent PNGs */
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 100%;
   object-fit: contain;
   background: var(--panel);
-  padding: clamp(12px, 4vw, 22px);
-  display: block;
-}
-
-/* Desktop: full-screen horizontal scroller with snap; ONLY logo + products visible */
-@media (min-width: 900px) {
-  .viewport {
-    /* use full viewport height under the header */
-    height: calc(100vh - var(--header-h));
-    overflow: hidden; /* hide vertical chrome */
-  }
-
-  .product-strip {
-    padding: 0 var(--gap);
-    flex-direction: row;
-    align-items: center;      /* center tiles vertically within the viewport */
-    justify-content: center;  /* center the whole strip */
-    gap: var(--gap);
-    width: 100%;
-    height: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-  }
-
-  .product-strip::-webkit-scrollbar { height: 10px; }
-  .product-strip::-webkit-scrollbar-thumb {
-    background: color-mix(in oklab, var(--text) 18%, transparent);
-    border-radius: 999px;
-  }
-
-  .tile {
-    flex: 0 0 auto;
-    width: var(--tile-edge-d);
-    height: var(--tile-edge-d);
-    scroll-snap-align: center;
-  }
-  .tile__img {
-    width: 100%;
-    height: 100%;
-    aspect-ratio: auto;
-    padding: clamp(14px, 2.2vh, 24px);
-  }
-}
-
-/* ===== Detail page (flex) ===== */
-.detail {
-  flex: 1 1 auto;
-  display: flex;
-  padding: var(--gap-lg);
-}
-.detail-shell {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-lg);
-  width: 100%;
-}
-.detail-media { display: flex; }
-.detail-img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-  background: var(--panel);
-  border-radius: var(--radius);
-  padding: clamp(12px, 3vw, 28px);
-  box-shadow: 0 1px 0 color-mix(in oklab, var(--text) 10%, transparent);
-}
-.detail-actions {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap);
-}
-.detail-price {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin: .25rem 0 1rem;
-}
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  padding: .85rem 1.1rem;
-  border-radius: 12px;
-  border: 0;
-  font-weight: 600;
-  cursor: pointer;
-  background: var(--brand);
-  color: #fff;
-}
-.btn:hover { background: var(--brand-600); }
-.back-link a { color: var(--muted); text-decoration: none; }
-.back-link a:hover { text-decoration: underline; }
-
-@media (min-width: 900px) {
-  .detail-shell {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-  .detail-media, .detail-actions {
-    flex: 1 1 0;
-  }
-}
-
-/* Footer (used only on product page) */
-.site-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--gap);
-  color: var(--muted);
-}
-
-/* A11y helper */
-.sr-only{
-  position:absolute!important; width:1px; height:1px; padding:0; margin:-1px;
-  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+  border-radius: 16px;
+  padding: 1rem;
 }

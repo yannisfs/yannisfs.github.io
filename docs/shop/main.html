@@ -2,46 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>My Shop</title>
+  <title>My Shop – Carousel</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="./css/shop.css" rel="stylesheet" />
 </head>
-<body class="mode-list">
-  <div class="page">
-    <header class="site-header">
-      <div class="header-bar">
-        <a class="logo-box" href="./index.html" aria-label="My Shop">
-          <img src="./img/logo.png" alt="My Shop logo" />
-        </a>
-      </div>
-    </header>
+<body class="mode-carousel">
+  <header class="site-header">
+    <div class="header-bar">
+      <a class="logo-box" href="./index.html" aria-label="My Shop">
+        <img src="./img/logo.png" alt="My Shop logo" />
+      </a>
+    </div>
+  </header>
 
-    <main class="viewport">
-      <!-- Product strip: column on mobile, full-height horizontal scroller on desktop -->
-      <ul class="product-strip" role="list">
-        <li class="tile">
-          <a class="tile__link" href="./product.html">
-            <img class="tile__img" src="./img/product1.png" alt="Product 1" />
-          </a>
-        </li>
-        <li class="tile">
-          <a class="tile__link" href="./product.html">
-            <img class="tile__img" src="./img/product2.png" alt="Product 2" />
-          </a>
-        </li>
-        <li class="tile">
-          <a class="tile__link" href="./product.html">
-            <img class="tile__img" src="./img/product3.png" alt="Product 3" />
-          </a>
-        </li>
-        <li class="tile">
-          <a class="tile__link" href="./product.html">
-            <img class="tile__img" src="./img/product4.png" alt="Product 4" />
-          </a>
-        </li>
-      </ul>
-    </main>
-    <!-- no footer on the list page: only logo + products are visible -->
-  </div>
+  <main class="carousel-container">
+    <ul class="carousel" id="carousel">
+      <li class="tile"><a href="./product.html?id=1"><img src="./img/product1.png" alt="Product 1"></a></li>
+      <li class="tile"><a href="./product.html?id=2"><img src="./img/product2.png" alt="Product 2"></a></li>
+      <li class="tile"><a href="./product.html?id=3"><img src="./img/product3.png" alt="Product 3"></a></li>
+      <li class="tile"><a href="./product.html?id=4"><img src="./img/product4.png" alt="Product 4"></a></li>
+      <li class="tile"><a href="./product.html?id=5"><img src="./img/product5.png" alt="Product 5"></a></li>
+    </ul>
+  </main>
+
+  <script src="./js/carousel.js"></script>
 </body>
 </html>
