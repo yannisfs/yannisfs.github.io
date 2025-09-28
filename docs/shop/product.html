@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Product 1 – My Shop</title>
+  <title>Product – My Shop</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="./css/shop.css" rel="stylesheet" />
 </head>
@@ -19,21 +19,20 @@
     <main class="detail">
       <div class="detail-shell">
         <div class="detail-media">
-          <img class="detail-img" src="./img/product1.png" alt="Product 1" />
+          <img class="detail-img" src="" alt="" />
         </div>
-
         <div class="detail-actions">
-          <h1 class="sr-only">Product 1</h1>
-          <p class="detail-price">29.00 EUR</p>
+          <h1 class="detail-title"></h1>
+          <p class="detail-price"></p>
 
-          <!-- PayPal sandbox (safe for testing) -->
+          <!-- PayPal Sandbox Buy Now -->
           <form class="paypal-form" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
             <input type="hidden" name="cmd" value="_xclick" />
             <input type="hidden" name="business" value="sb-merchant@example.com" />
-            <input type="hidden" name="item_name" value="Product 1" />
-            <input type="hidden" name="item_number" value="SKU-001" />
-            <input type="hidden" name="amount" value="29.00" />
-            <input type="hidden" name="currency_code" value="EUR" />
+            <input type="hidden" name="item_name" />
+            <input type="hidden" name="item_number" />
+            <input type="hidden" name="amount" />
+            <input type="hidden" name="currency_code" />
             <input type="hidden" name="no_shipping" value="0" />
             <input type="hidden" name="return" value="http://localhost/product.html" />
             <input type="hidden" name="cancel_return" value="http://localhost/index.html" />
@@ -44,14 +43,31 @@
         </div>
       </div>
     </main>
-
-    <footer class="site-footer">
-      <small>&copy; <span id="year"></span> My Shop</small>
-    </footer>
   </div>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    async function loadProduct() {
+      const id = new URLSearchParams(location.search).get("id");
+      if (!id) return;
+      try {
+        const res = await fetch("./products.json");
+        const products = await res.json();
+        const p = products.find(x => x.id === id);
+        if (!p) return;
+
+        document.title = `${p.name} – My Shop`;
+        document.querySelector(".detail-title").textContent = p.name;
+        document.querySelector(".detail-price").textContent = `${p.price} ${p.currency}`;
+        const img = document.querySelector(".detail-img");
+        img.src = p.image; img.alt = p.name;
+
+        document.querySelector("input[name=item_name]").value = p.name;
+        document.querySelector("input[name=item_number]").value = p.sku;
+        document.querySelector("input[name=amount]").value = p.price;
+        document.querySelector("input[name=currency_code]").value = p.currency;
+      } catch(e){ console.error(e); }
+    }
+    loadProduct();
   </script>
 </body>
 </html>

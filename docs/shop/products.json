@@ -1,0 +1,7 @@
+[
+    {"id":"1","name":"Product 1","price":"29.00","currency":"EUR","image":"./img/product1.png","sku":"SKU-001"},
+    {"id":"2","name":"Product 2","price":"59.00","currency":"EUR","image":"./img/product2.png","sku":"SKU-002"},
+    {"id":"3","name":"Product 3","price":"89.00","currency":"EUR","image":"./img/product3.png","sku":"SKU-003"},
+    {"id":"4","name":"Product 4","price":"39.00","currency":"EUR","image":"./img/product4.png","sku":"SKU-004"},
+    {"id":"5","name":"Product 5","price":"49.00","currency":"EUR","image":"./img/product5.png","sku":"SKU-005"}
+]
